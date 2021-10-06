@@ -9,9 +9,10 @@ public class CamFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector2 pos = transform.position;
+        Vector3 pos = transform.position;
         pos.x = playerPos.position.x;
         pos.y = playerPos.position.y;
+        pos.z = -10;
         transform.position = pos;
     }
 }
