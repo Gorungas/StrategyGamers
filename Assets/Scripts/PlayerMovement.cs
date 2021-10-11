@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int playerNum = 1;
+    public int playerNum;
 
     private string hor;
     private string vert;
