@@ -407,17 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numVillages: 10
   villagePrefab: {fileID: 3532183522163729768, guid: 49e63dfd2e81b794a8cedf6baf78c940, type: 3}
-  villageArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  villageArray: []
   possibleLocation:
   - {fileID: 2099208574}
   - {fileID: 1477461727}
