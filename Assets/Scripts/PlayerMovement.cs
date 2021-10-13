@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public Rigidbody2D reticle;
 
     void Start()
     {

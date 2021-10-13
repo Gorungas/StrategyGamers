@@ -21,7 +21,7 @@ public class VillageInstantiate : MonoBehaviour
                     index = Random.Range(0, possibleLocation.Length);
                 }
                 checklist[index] = true;    
-                villageArray.Add(Instantiate(villagePrefab, possibleLocation[index].transform.position, Quaternion.identity));
+                villageArray.Add(Instantiate(villagePrefab, possibleLocation[index].transform.position + new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0), Quaternion.identity));
 
             }
         }

@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followPos: {fileID: 0}
-  speed: 1
+  speed: 3
   isFollowing: 1
 --- !u!114 &2470878864139071216
 MonoBehaviour:
@@ -112,4 +112,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 7885209159362568347, guid: 493e5cdcb68732c4d81a1edb059d3ecb, type: 3}
-  reticle: {fileID: 0}
