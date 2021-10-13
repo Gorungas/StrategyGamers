@@ -39,6 +39,7 @@ public class SoilderManager : MonoBehaviour
             GameObject solider = Instantiate(soldierPrefab,transform.position,Quaternion.identity);
             AssignSoldier(solider);
         }
+        if (soldierNum < 0) { soldierNum = 0; }
         return soldierNum;
     }
 }
