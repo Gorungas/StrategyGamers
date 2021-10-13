@@ -6,8 +6,8 @@ public class SoliderScript : MonoBehaviour
 {
     //attack
     //health
-    public int health;
-    public int maxHealth;
+    public GameObject arrow;
+    public GameObject reticle;
     //animation
 
 
@@ -20,6 +20,11 @@ public class SoliderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButton("Fire1"))
+        {
+            this.transform.LookAt(reticle.transform.position);
+            arrow = Instantiate(arrow, this.transform.forward, Quaternion.identity);
+            arrow.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(10, 10));
+        }
     }
 }

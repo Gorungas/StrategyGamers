@@ -9,19 +9,22 @@ public class PlayerMovement : MonoBehaviour
     private string hor;
     private string vert;
 
-    public Rigidbody2D rb;
+    public float speed;
+
+    private Rigidbody2D rb;
+
+    public Rigidbody2D reticle;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
-
     }
 
 
     void Update()
     {
-        rb.velocity = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert));
+        rb.velocity = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
     }
 }
