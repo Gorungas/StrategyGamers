@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3343825633405374426}
   - component: {fileID: 5901447983476374086}
+  - component: {fileID: -4528498461263644213}
   m_Layer: 0
   m_Name: Village
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4395dc08b250a4f06b2e57fa8a879ad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4528498461263644213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276404981340542528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5839db0b510c463693acf9e85cff35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  villigers: 2
+  recoverTime: 10
+  captureTime: 3

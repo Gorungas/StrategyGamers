@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numVillages: 10
-  villagePrefab: {fileID: 3532183522163729768, guid: 49e63dfd2e81b794a8cedf6baf78c940, type: 3}
+  villagePrefab: {fileID: 276404981340542528, guid: 7c09a64eb1f6627459b47d144456eaa1, type: 3}
   villageArray: []
   possibleLocation:
   - {fileID: 2099208574}
@@ -1116,7 +1116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659001693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0753313, y: -8.605309, z: -299.2914}
+  m_LocalPosition: {x: 1.0753313, y: -8.605309, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2099208576}
