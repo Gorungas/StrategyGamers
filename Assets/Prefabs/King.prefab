@@ -664,6 +664,7 @@ MonoBehaviour:
   - {fileID: 8570172694880176701}
   - {fileID: 7912460130298552119}
   soldiers: []
+  soldierPrefab: {fileID: 2470878864139071212, guid: c37c305dd4155420ebd9aba1b629a60a, type: 3}
 --- !u!114 &5381131831384394294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
-  rb: {fileID: 0}
+  speed: 5
+  reticle: {fileID: 0}
 --- !u!61 &7234319123942888638
 BoxCollider2D:
   m_ObjectHideFlags: 0
