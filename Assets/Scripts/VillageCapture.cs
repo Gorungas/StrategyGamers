@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class VillageCapture : MonoBehaviour
 {
-    public int villigers;
+    private int villigers;
+    public int maxVilligers;
     public float recoverTime=10f;
     public float captureTime=3f;
     private bool isCapturing;
     private GameObject lastKing;
+    public TMP_Text numTxt;
     //private SoilderManager soilderManager;
     // Start is called before the first frame update
     void Start()
@@ -52,13 +55,21 @@ public class VillageCapture : MonoBehaviour
         {
             villigers -= soilderManager.SetSoldier(villigers);
         }
+        numTxt.text = villigers.ToString();
     }
     IEnumerator Recover()
     {
         while (true)
         {
-            villigers += 1;
-            yield return new WaitForSeconds(recoverTime);
+            if (villigers< maxVilligers) {
+                villigers += 1;
+                numTxt.text = villigers.ToString();
+                yield return new WaitForSeconds(recoverTime);
+            }
+            else
+            {
+                yield return null;
+            }
         }
     }
     //King leave viilage
