@@ -33,13 +33,18 @@ public class SoilderManager : MonoBehaviour
     }
     public int SetSoldier(int num)
     {
-        int soldierNum = num-(soldiersPoses.Length - soldiers.Count);
+        int soldierNum = soldiersPoses.Length - soldiers.Count;
+        if (num < soldierNum)
+        {
+            soldierNum = num;
+        }
+        Debug.Log(soldierNum);
         for (int i=0; i< soldierNum; i++)
         {
             GameObject solider = Instantiate(soldierPrefab,transform.position,Quaternion.identity);
             AssignSoldier(solider);
         }
-        if (soldierNum < 0) { soldierNum = 0; }
+        //if (soldierNum < 0) { soldierNum = 0; }
         return soldierNum;
     }
 }
