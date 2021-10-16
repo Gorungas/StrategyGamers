@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 7885209159362568347, guid: 493e5cdcb68732c4d81a1edb059d3ecb, type: 3}
+  reticle: {fileID: 0}
+  bulletSpeed: 2
