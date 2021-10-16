@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
 
     private Rigidbody2D rb;
+    private Animator _animator;
 
 
     void Start()
@@ -19,11 +20,23 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
+        _animator = GetComponent<Animator>();
     }
 
 
     void Update()
     {
-        rb.velocity = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
+        Vector2 move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
+        _animator.SetFloat("Hor",Mathf.Abs(move.x));
+        _animator.SetFloat("Ver", move.y);
+        if (move.x < -0.1f)
+        {
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+        }
+        else if(move.x>0.1f)
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
+        }
+        rb.velocity = move;
     }
 }

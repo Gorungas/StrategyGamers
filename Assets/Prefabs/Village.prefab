@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVilligers: 5
-  recoverTime: 10
+  recoverTime: 15
   captureTime: 3
   numTxt: {fileID: 2055152708968904596}
   sr: {fileID: 5321374389568759577}
