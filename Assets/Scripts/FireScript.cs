@@ -13,6 +13,7 @@ public class FireScript : MonoBehaviour
     public float initialArrowDelay;
 
     public float arrowLifetime;
+    public float arrowMaxLife;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class FireScript : MonoBehaviour
 
     void Update()
     {
+        arrowLifetime -= Time.deltaTime;
         if (arrowDelay > 0)
         {
             arrowDelay -= Time.deltaTime;
@@ -31,14 +33,15 @@ public class FireScript : MonoBehaviour
             {
                 if (arrowDelay <= 0)
                 {
-                    soldier.transform.LookAt(reticle.transform.position);
+                    arrowLifetime = arrowMaxLife;
                     arrow = Instantiate(arrow, soldier.transform.position, Quaternion.identity);
-                    
                     arrowDelay = initialArrowDelay;
                 }
+
+
+                arrow.transform.LookAt(reticle.transform.position);
                 arrow.gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * bulletSpeed;
             }
             }
-        
     }
 }

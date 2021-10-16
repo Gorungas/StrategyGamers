@@ -7,15 +7,29 @@ public class HealthManager : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
-    void TakeDamage()
+    void TakeDamage(int dmg)
     {
+        if (currentHealth != 0)
+            currentHealth -= dmg;
+
+        else if (currentHealth == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
-    void Heal()
+    void Heal(int hp)
     {
+        if (currentHealth != maxHealth)
+            currentHealth += hp;
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Arrow"))
+        {
+            TakeDamage(1);
+        }
     }
 }
