@@ -6,14 +6,14 @@ public class MeleeAttack : MonoBehaviour
 {
     public int playerNum;
     private string button;
-
+    private PlayerMovement movement;
     //public SpriteRenderer sr;
     //public Sprite attackSprite;
     //Sprite idleSprite;
 
     public float duration;
     public bool canAtt = true;
-    public Rect attackshape;
+    public Vector2 attackSize;
     public LayerMask attckObj;
     public int attVal;
     public Vector2 attForce;
@@ -21,7 +21,7 @@ public class MeleeAttack : MonoBehaviour
     //public AudioClip attClip;
     //public AudioClip hitClip;
     public float coolDown;
-    public GameObject attEffect;
+    public GameObject[] attEffects;
     //public Sprite coolSprite;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,7 @@ public class MeleeAttack : MonoBehaviour
         //idleSprite = sr.sprite;
         //audioSource = GetComponent<AudioSource>();
         button = "Attack" + playerNum;
+        movement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class MeleeAttack : MonoBehaviour
         {
             canAtt = false;
             //audioSource.PlayOneShot(attClip);
-            DetectAttack();
+            
             StartCoroutine(Attack());
             //Debug.Log("start");
         }
@@ -51,14 +52,17 @@ public class MeleeAttack : MonoBehaviour
         //{
         //    yield return null;
         //}
-        if (attEffect != null)
+        PlayerMovement.FaceDirection face = movement.face;
+        int direction = ((int)face);
+        if (attEffects[direction] != null)
         {
-            attEffect.SetActive(true);
+            attEffects[direction].SetActive(true);
         }
+        DetectAttack(direction);
         yield return new WaitForSeconds(duration);
-        if (attEffect != null)
+        if (attEffects[direction] != null)
         {
-            attEffect.SetActive(false);
+            attEffects[direction].SetActive(false);
         }
         //Debug.Log("end");
         //if (coolSprite != null)
@@ -70,9 +74,11 @@ public class MeleeAttack : MonoBehaviour
         //sr.sprite = idleSprite;
         canAtt = true;
     }
-    public void DetectAttack()
+    public void DetectAttack(int direction)
     {
-        Collider2D[] enemys = Physics2D.OverlapBoxAll(attackshape.position, attackshape.size, 0,attckObj);
+        float angle = 0;
+        if (direction == 2) { angle = 90; }
+        Collider2D[] enemys = Physics2D.OverlapBoxAll(attEffects[direction].transform.position, attackSize, angle, attckObj);
         //Debug.Log(enemys);
         foreach (Collider2D enemy in enemys)
         {

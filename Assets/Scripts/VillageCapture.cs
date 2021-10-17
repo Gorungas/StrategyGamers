@@ -6,6 +6,7 @@ using TMPro;
 public class VillageCapture : MonoBehaviour
 {
     private int villigers;
+    public Sprite[] sprites;
     public int maxVilligers;
     public float recoverTime=10f;
     public float captureTime=3f;
@@ -14,12 +15,14 @@ public class VillageCapture : MonoBehaviour
     public TMP_Text numTxt;
     public SpriteRenderer sr;
     private Color kingColor;
+    public Color transparentColor;
     //private SoilderManager soilderManager;
     // Start is called before the first frame update
     void Start()
     {
         //sr = GetComponent<SpriteRenderer>();
         StartCoroutine(Recover());
+        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
     }
 
     // Update is called once per frame
@@ -45,7 +48,7 @@ public class VillageCapture : MonoBehaviour
         {
             isCapturing = false;
             lastKing = null;
-            sr.color=Color.white;
+            sr.color= transparentColor;
         }
     }
     //capturing
@@ -59,7 +62,7 @@ public class VillageCapture : MonoBehaviour
             stayTime += Time.deltaTime;
             //Debug.Log(stayTime);
             //Debug.Log(colorNum);
-            sr.color = Color.Lerp(Color.white,kingColor,colorNum);
+            sr.color = Color.Lerp(transparentColor, kingColor,colorNum);
             yield return null;
         }
         //Debug.Log(stayTime);

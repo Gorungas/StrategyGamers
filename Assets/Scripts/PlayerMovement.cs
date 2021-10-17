@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
 
 
+    public enum FaceDirection {Up,Down,Right };
+    public FaceDirection face=FaceDirection.Down;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +38,15 @@ public class PlayerMovement : MonoBehaviour
         else if(move.x>0.1f)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
+        }
+        face = FaceDirection.Right;
+        if (move.y > 0)
+        {
+            face = FaceDirection.Up;
+        }
+        else if(move.y < 0)
+        {
+            face = FaceDirection.Down;
         }
         rb.velocity = move;
     }
