@@ -23497,18 +23497,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2119955243}
     m_Modifications:
-    - target: {fileID: 261572898, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 261572898, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
-      propertyPath: attckObj.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 3880830477785606779, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3880830477785606780, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -23556,10 +23544,6 @@ PrefabInstance:
     - target: {fileID: 3880830477785606782, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: m_Name
       value: JuggerNaut
-      objectReference: {fileID: 0}
-    - target: {fileID: 3880830477785606782, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}

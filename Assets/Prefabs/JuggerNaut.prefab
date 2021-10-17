@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &324396181719180999
 Transform:
   m_ObjectHideFlags: 0
@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 261572898}
   - component: {fileID: 261572900}
   - component: {fileID: 6888706826264549778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JuggerNaut
-  m_TagString: Untagged
+  m_TagString: Jugg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a65e9184ab8a1946bf4bda278a4689b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 4
+  playerNum: 1
   speed: 2
   face: 1
 --- !u!50 &3880830477785606778
@@ -267,17 +267,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87606ea24cf8448e9a737326c2bdf98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 1
   duration: 0.2
   canAtt: 1
   attackSize: {x: 0, y: 0}
   attckObj:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   attVal: 5
   attForce: {x: 0, y: 0}
   coolDown: 0
-  attEffects: []
+  attEffects:
+  - {fileID: 5704682580611229444}
+  - {fileID: 2665384440889158207}
+  - {fileID: 7071246977422720766}
 --- !u!114 &261572900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6899798959187873767
 Transform:
   m_ObjectHideFlags: 0
@@ -402,7 +405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1033421141403381546
 Transform:
   m_ObjectHideFlags: 0

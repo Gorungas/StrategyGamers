@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: -4528498461263644213}
   - component: {fileID: 3422839180618436013}
   - component: {fileID: 9010645294590130898}
-  m_Layer: 0
+  - component: {fileID: 933077577655194458}
+  m_Layer: 8
   m_Name: Village
-  m_TagString: Untagged
+  m_TagString: Village
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +152,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.028097011, y: -1.2206265}
   m_Size: {x: 4.051679, y: 2.9119117}
   m_Direction: 1
+--- !u!114 &933077577655194458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276404981340542528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3303ed817dc88a74eaf48f72cd621e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 10
 --- !u!1 &697771625772051632
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +178,7 @@ GameObject:
   - component: {fileID: 3662278887433364792}
   - component: {fileID: 4099781788072955565}
   - component: {fileID: 2626797815910873633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702921050605878081}
   - component: {fileID: 5321374389568759577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +359,7 @@ GameObject:
   - component: {fileID: 4436122724417054715}
   - component: {fileID: 380824990420452416}
   - component: {fileID: 2055152708968904596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

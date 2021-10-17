@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - King
+  - Village
+  - Jugg
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - King
   - Jugg
-  - 
+  - Village
   - 
   - 
   - 
