@@ -13,13 +13,8 @@ public class FireScript : MonoBehaviour
     public float initialArrowDelay;
 
     public float arrowLifetime;
-    public float arrowMaxLife;
 
     public int dmg;
-
-    void Start()
-    {
-    }
 
     void Update()
     {
@@ -28,8 +23,7 @@ public class FireScript : MonoBehaviour
         {
             StartCoroutine(Shoot());
 
-        }
-        
+        }     
     }
     IEnumerator Shoot()
     {
@@ -40,8 +34,8 @@ public class FireScript : MonoBehaviour
         print(shotDir);
         if (shotDir != new Vector2(0.0f, 0.0f) && arrowDelay <= 0 && manager.soldiers.Count != 0)
         {
-            GameObject newArrow = Instantiate(arrow, transform.position, Quaternion.Euler(0, angle, 0));
-            newArrow.gameObject.GetComponent<Rigidbody2D>().velocity = shotDir;
+            GameObject newArrow = Instantiate(arrow, transform.position, Quaternion.Euler(0, 0, angle));
+            newArrow.gameObject.GetComponent<Rigidbody2D>().velocity = shotDir * bulletSpeed;
             arrowDelay = initialArrowDelay;
             yield return new WaitForSeconds(arrowLifetime);
             Destroy(newArrow);
