@@ -31,7 +31,6 @@ public class FireScript : MonoBehaviour
 
         Vector2 shotDir = new Vector2(transform.position.x - reticle.transform.position.x, transform.position.y - reticle.transform.position.y) * -1;
         float angle = Vector2.Angle(transform.forward, reticle.transform.forward);
-        print(shotDir);
         if (shotDir != new Vector2(0.0f, 0.0f) && arrowDelay <= 0 && manager.soldiers.Count != 0)
         {
             GameObject newArrow = Instantiate(arrow, transform.position, Quaternion.Euler(0, 0, angle));
@@ -40,10 +39,5 @@ public class FireScript : MonoBehaviour
             yield return new WaitForSeconds(arrowLifetime);
             Destroy(newArrow);
         }
-        print(dmg);
-
-
-        
-
     }
 }
