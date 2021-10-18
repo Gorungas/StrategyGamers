@@ -15,33 +15,41 @@ public class FireScript : MonoBehaviour
     public float arrowLifetime;
     public float arrowMaxLife;
 
+    public int dmg;
+
     void Start()
     {
     }
 
     void Update()
     {
-        arrowLifetime -= Time.deltaTime;
-        if (arrowDelay > 0)
-        {
-            arrowDelay -= Time.deltaTime;
-            print(arrowDelay);
-        }
+        arrowDelay -= Time.deltaTime;
         if (Input.GetButton("Fire1"))
         {
-            foreach(GameObject soldier in manager.soldiers)
-            {
-                if (arrowDelay <= 0)
-                {
-                    arrowLifetime = arrowMaxLife;
-                    arrow = Instantiate(arrow, soldier.transform.position, Quaternion.identity);
-                    arrowDelay = initialArrowDelay;
-                }
+            StartCoroutine(Shoot());
+
+        }
+        
+    }
+    IEnumerator Shoot()
+    {
+        dmg = manager.soldiers.Count;
+
+        Vector2 shotDir = new Vector2(transform.position.x - reticle.transform.position.x, transform.position.y - reticle.transform.position.y) * -1;
+        float angle = Vector2.Angle(transform.forward, reticle.transform.forward);
+        print(shotDir);
+        if (shotDir != new Vector2(0.0f, 0.0f) && arrowDelay <= 0 && manager.soldiers.Count != 0)
+        {
+            GameObject newArrow = Instantiate(arrow, transform.position, Quaternion.Euler(0, angle, 0));
+            newArrow.gameObject.GetComponent<Rigidbody2D>().velocity = shotDir;
+            arrowDelay = initialArrowDelay;
+            yield return new WaitForSeconds(arrowLifetime);
+            Destroy(newArrow);
+        }
+        print(dmg);
 
 
-                arrow.transform.LookAt(reticle.transform.position);
-                arrow.gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * bulletSpeed;
-            }
-            }
+        
+
     }
 }

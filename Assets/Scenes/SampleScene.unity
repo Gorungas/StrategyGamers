@@ -22843,10 +22843,11 @@ MonoBehaviour:
   reticle: {fileID: 843269944}
   bulletSpeed: 2
   manager: {fileID: 1818640111}
-  arrowDelay: 2
+  arrowDelay: 0
   initialArrowDelay: 2
   arrowLifetime: 2
   arrowMaxLife: 2
+  dmg: 0
 --- !u!114 &1818640115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22861,6 +22862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  arrows: {fileID: 0}
 --- !u!1 &1888069672
 GameObject:
   m_ObjectHideFlags: 0
@@ -22913,6 +22915,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9197323571000292631, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
   m_PrefabInstance: {fileID: 2009400927}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1961648762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961648761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fa6d070731ae349b428fbc99a356e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 3185101880070281880, guid: 0f028696b0cd8ed488b0395d427dda75, type: 3}
+  reticle: {fileID: 843269944}
+  bulletSpeed: 2
+  manager: {fileID: 7609919871797983825}
+  arrowDelay: 0
+  initialArrowDelay: 2
+  arrowLifetime: 2
+  arrowMaxLife: 2
+  dmg: 0
+--- !u!114 &1961648767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6665160845780492254, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+  m_PrefabInstance: {fileID: 2009400927}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961648761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36be89e72b68244d6998a0b569b168b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1961648770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22927,6 +22961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  arrows: {fileID: 0}
 --- !u!1 &1970202391
 GameObject:
   m_ObjectHideFlags: 0
@@ -23647,6 +23682,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7234319123942888638, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234319123942888638, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1
       objectReference: {fileID: 0}
@@ -23658,7 +23697,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: King3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6351979143025822513, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
 --- !u!1 &7609919871797983817 stripped
 GameObject:
@@ -23686,11 +23726,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7609919871797983819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609919871797983817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fa6d070731ae349b428fbc99a356e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 4246409560302756578, guid: 1dc74cf7b404f2c47a1ea570580b1d7e, type: 3}
+  reticle: {fileID: 843269944}
+  bulletSpeed: 2
+  manager: {fileID: 1961648767}
+  arrowDelay: 0
+  initialArrowDelay: 2
+  arrowLifetime: 2
+  arrowMaxLife: 2
+  dmg: 0
 --- !u!4 &7609919871797983820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6298776153868329079, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
   m_PrefabInstance: {fileID: 7609919871797983816}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7609919871797983825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6665160845780492254, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+  m_PrefabInstance: {fileID: 7609919871797983816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609919871797983817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36be89e72b68244d6998a0b569b168b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7609919871797983827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23705,3 +23777,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  arrows: {fileID: 1818640114}

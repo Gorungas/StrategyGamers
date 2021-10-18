@@ -6,6 +6,7 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+    public FireScript arrows;
 
     public void TakeDamage(int dmg)
     {
@@ -29,7 +30,8 @@ public class HealthManager : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
-            TakeDamage(1);
+            TakeDamage(arrows.dmg);
+            Destroy(other.gameObject);
         }
     }
 }
