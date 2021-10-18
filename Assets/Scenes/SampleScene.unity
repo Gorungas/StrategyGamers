@@ -29871,6 +29871,7 @@ MonoBehaviour:
   arrows1: {fileID: 1818640114}
   arrows2: {fileID: 1961648762}
   arrows3: {fileID: 7609919871797983819}
+  healDelay: 0
 --- !u!1 &1888069672
 GameObject:
   m_ObjectHideFlags: 0
@@ -29972,6 +29973,7 @@ MonoBehaviour:
   arrows1: {fileID: 1818640114}
   arrows2: {fileID: 1961648762}
   arrows3: {fileID: 7609919871797983819}
+  healDelay: 0
 --- !u!1 &1970202391
 GameObject:
   m_ObjectHideFlags: 0
@@ -30570,6 +30572,14 @@ PrefabInstance:
       propertyPath: playerNum
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2122144045991104578, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
+      propertyPath: scaleGrowth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122144045991104578, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
+      propertyPath: speedGrowth
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3880830477785606779, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: playerNum
       value: 4
@@ -30638,6 +30648,10 @@ PrefabInstance:
       propertyPath: arrows3
       value: 
       objectReference: {fileID: 7609919871797983819}
+    - target: {fileID: 8353602923916755865, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
+      propertyPath: playerNum
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
 --- !u!114 &3880830477593797472 stripped
@@ -30861,3 +30875,4 @@ MonoBehaviour:
   arrows1: {fileID: 1818640114}
   arrows2: {fileID: 1961648762}
   arrows3: {fileID: 7609919871797983819}
+  healDelay: 0
