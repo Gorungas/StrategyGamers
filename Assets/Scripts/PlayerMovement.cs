@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int playerNum;
 
     private string hor;
     private string vert;
@@ -19,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public FaceDirection face=FaceDirection.Down;
     void Start()
     {
+        int playerNum = GetComponent<PlayerNumberManager>().playerNum;
         rb = GetComponent<Rigidbody2D>();
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
@@ -33,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetFloat("Ver", move.y);
         if (move.x < -0.1f)
         {
-            transform.localScale = new Vector2(-1, transform.localScale.y);
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         else if(move.x>0.1f)
         {
-            transform.localScale = new Vector2(1, transform.localScale.y);
+            transform.localScale = new Vector2(+Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         face = FaceDirection.Right;
         if (move.y > 0)

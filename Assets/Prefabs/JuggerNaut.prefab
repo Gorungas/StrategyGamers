@@ -97,8 +97,10 @@ GameObject:
   - component: {fileID: 3880830477785606777}
   - component: {fileID: 3880830477785606776}
   - component: {fileID: 261572898}
+  - component: {fileID: 8353602923916755865}
   - component: {fileID: 261572900}
   - component: {fileID: 6888706826264549778}
+  - component: {fileID: 2122144045991104578}
   m_Layer: 7
   m_Name: JuggerNaut
   m_TagString: Jugg
@@ -186,7 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a65e9184ab8a1946bf4bda278a4689b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
   speed: 2
   face: 1
 --- !u!50 &3880830477785606778
@@ -267,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87606ea24cf8448e9a737326c2bdf98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
   duration: 0.2
   canAtt: 1
   attackSize: {x: 0, y: 0}
@@ -281,6 +281,19 @@ MonoBehaviour:
   - {fileID: 7071246977422720766}
   - {fileID: 5704682580611229444}
   - {fileID: 2665384440889158207}
+--- !u!114 &8353602923916755865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880830477785606782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9ae0c06116140ec84e664f7e6d7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 1
 --- !u!114 &261572900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +320,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   currentHealth: 30
+  playerNum: 0
+  arrows1: {fileID: 0}
+  arrows2: {fileID: 0}
+  arrows3: {fileID: 0}
+  healDelay: 0
+--- !u!114 &2122144045991104578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880830477785606782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0c1659683ea4d6bb7d5a07c29b999d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  scaleGrowth: 0.1
+  speedGrowth: 0.3
 --- !u!1 &5704682580611229444
 GameObject:
   m_ObjectHideFlags: 0

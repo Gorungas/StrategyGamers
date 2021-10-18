@@ -6,45 +6,77 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+    public int playerNum;
     public FireScript arrows1;
     public FireScript arrows2;
     public FireScript arrows3;
-    public PlayerMovement player;
+
+    public float healDelay;
+    
+    private bool HealedRecently;
+    private bool HealingNow;
+
+    public void Start()
+    {
+        playerNum = GetComponent<PlayerNumberManager>().playerNum;
+    }
+
+    private void Update()
+    {
+        if (currentHealth < maxHealth && HealingNow == false)
+        {
+            StartCoroutine(Heal());
+            HealingNow = true;
+        }
+    }
 
     public void TakeDamage(int dmg)
     {
         if (currentHealth != 0)
             currentHealth -= dmg;
 
-        else if (currentHealth == 0)
+        else if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
         }
     }
 
-    public void Heal(int hp)
+    public IEnumerator Heal()
     {
-        if (currentHealth != maxHealth)
-            currentHealth += hp;
+        while (currentHealth < maxHealth)
+        {
+            if (HealedRecently == false && currentHealth < maxHealth)
+            {
+                currentHealth++;
+                HealedRecently = true;
+            }
 
+            yield return new WaitForSeconds(healDelay);
+            HealedRecently = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Arrow") && player.playerNum != 1)
+        if (other.CompareTag("Arrow") && playerNum != 1)
         {
             TakeDamage(arrows1.dmg);
             Destroy(other.gameObject);
+
         }
-        else if (other.CompareTag("Arrow2") && player.playerNum != 2)
+        else if (other.CompareTag("Arrow2") && playerNum != 2)
         {
             TakeDamage(arrows2.dmg);
             Destroy(other.gameObject);
+
+
         }
-        else if (other.CompareTag("Arrow3") && player.playerNum != 3)
+        else if (other.CompareTag("Arrow3") && playerNum != 3)
         {
             TakeDamage(arrows3.dmg);
             Destroy(other.gameObject);
+
+
         }
     }
 }
