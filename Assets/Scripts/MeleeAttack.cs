@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    public int playerNum;
     private string button;
     private PlayerMovement movement;
     //public SpriteRenderer sr;
@@ -28,6 +27,7 @@ public class MeleeAttack : MonoBehaviour
     {
         //idleSprite = sr.sprite;
         //audioSource = GetComponent<AudioSource>();
+        int playerNum = GetComponent<PlayerNumberManager>().playerNum;
         button = "Attack" + playerNum;
         movement = GetComponent<PlayerMovement>();
     }

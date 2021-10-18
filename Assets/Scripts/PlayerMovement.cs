@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int playerNum;
 
     private string hor;
     private string vert;
@@ -19,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public FaceDirection face=FaceDirection.Down;
     void Start()
     {
+        int playerNum = GetComponent<PlayerNumberManager>().playerNum;
         rb = GetComponent<Rigidbody2D>();
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
