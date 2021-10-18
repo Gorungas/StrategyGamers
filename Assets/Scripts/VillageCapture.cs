@@ -87,5 +87,10 @@ public class VillageCapture : MonoBehaviour
             }
         }
     }
+    void OnDestroy()
+    {
+        GameObject jugg = GameObject.FindGameObjectWithTag("Jugg");
+        jugg.GetComponent<JuggGrowthScript>().LevelUp();
+    }
     //King leave viilage
 }

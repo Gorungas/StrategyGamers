@@ -6,10 +6,12 @@ public class JuggGrowthScript : MonoBehaviour
 {
     public int level;
     public float scaleGrowth;
+    public float speedGrowth;
+    private PlayerMovement playerMovement;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class JuggGrowthScript : MonoBehaviour
     public void LevelUp()
     {
         level+=1;
-        transform.localScale+=scaleGrowth;
-
+        transform.localScale+=new Vector3(scaleGrowth,scaleGrowth,0);
+        playerMovement.speed+=speedGrowth;
     }
 }

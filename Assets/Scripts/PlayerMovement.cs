@@ -33,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetFloat("Ver", move.y);
         if (move.x < -0.1f)
         {
-            transform.localScale = new Vector2(-1, transform.localScale.y);
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         else if(move.x>0.1f)
         {
-            transform.localScale = new Vector2(1, transform.localScale.y);
+            transform.localScale = new Vector2(+Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         face = FaceDirection.Right;
         if (move.y > 0)
