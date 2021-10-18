@@ -13,13 +13,8 @@ public class FireScript : MonoBehaviour
     public float initialArrowDelay;
 
     public float arrowLifetime;
-    public float arrowMaxLife;
 
     public int dmg;
-
-    void Start()
-    {
-    }
 
     void Update()
     {
@@ -28,8 +23,7 @@ public class FireScript : MonoBehaviour
         {
             StartCoroutine(Shoot());
 
-        }
-        
+        }     
     }
     IEnumerator Shoot()
     {
