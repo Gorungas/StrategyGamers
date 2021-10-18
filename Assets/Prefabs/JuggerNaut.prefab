@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 324396181719180999}
   - component: {fileID: 515138324263251354}
   m_Layer: 0
-  m_Name: Attack Effect(Up)
+  m_Name: Attack Effect(Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &3880830477785606777
 Animator:
   serializedVersion: 3
@@ -278,9 +278,9 @@ MonoBehaviour:
   attForce: {x: 0, y: 0}
   coolDown: 0
   attEffects:
+  - {fileID: 7071246977422720766}
   - {fileID: 5704682580611229444}
   - {fileID: 2665384440889158207}
-  - {fileID: 7071246977422720766}
 --- !u!114 &261572900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 1033421141403381546}
   - component: {fileID: 8540976920844175201}
   m_Layer: 0
-  m_Name: Attack Effect(Right)
+  m_Name: Attack Effect(Up)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
