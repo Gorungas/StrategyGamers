@@ -10,9 +10,11 @@ public class HealthManager : MonoBehaviour
     public FireScript arrows1;
     public FireScript arrows2;
     public FireScript arrows3;
-    public float healDelay;
 
-    private bool hitRecently;
+    public float healDelay;
+    
+    private bool HealedRecently;
+    private bool HealingNow;
 
     public void Start()
     {
@@ -21,9 +23,10 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
-        if (hitRecently && currentHealth != maxHealth)
+        if (currentHealth < maxHealth && HealingNow == false)
         {
             StartCoroutine(Heal());
+            HealingNow = true;
         }
     }
 
@@ -40,9 +43,17 @@ public class HealthManager : MonoBehaviour
 
     public IEnumerator Heal()
     {
-        yield return new WaitForSeconds(healDelay);
-        currentHealth += 1;
+        while (currentHealth < maxHealth)
+        {
+            if (HealedRecently == false && currentHealth < maxHealth)
+            {
+                currentHealth++;
+                HealedRecently = true;
+            }
 
+            yield return new WaitForSeconds(healDelay);
+            HealedRecently = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,20 +62,20 @@ public class HealthManager : MonoBehaviour
         {
             TakeDamage(arrows1.dmg);
             Destroy(other.gameObject);
-            hitRecently = true;
+
         }
         else if (other.CompareTag("Arrow2") && playerNum != 2)
         {
             TakeDamage(arrows2.dmg);
             Destroy(other.gameObject);
-            hitRecently = true;
+
 
         }
         else if (other.CompareTag("Arrow3") && playerNum != 3)
         {
             TakeDamage(arrows3.dmg);
             Destroy(other.gameObject);
-            hitRecently = true;
+
 
         }
     }

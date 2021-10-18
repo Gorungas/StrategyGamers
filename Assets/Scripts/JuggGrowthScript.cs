@@ -20,7 +20,7 @@ public class JuggGrowthScript : MonoBehaviour
     public void LevelUp()
     {
         level+=1;
-        transform.localScale+=scaleGrowth;
+       // transform.localScale+=scaleGrowth;
 
     }
 }
