@@ -29871,7 +29871,7 @@ MonoBehaviour:
   arrows1: {fileID: 1818640114}
   arrows2: {fileID: 1961648762}
   arrows3: {fileID: 7609919871797983819}
-  healDelay: 0
+  healDelay: 2
 --- !u!1 &1888069672
 GameObject:
   m_ObjectHideFlags: 0
@@ -29973,7 +29973,7 @@ MonoBehaviour:
   arrows1: {fileID: 1818640114}
   arrows2: {fileID: 1961648762}
   arrows3: {fileID: 7609919871797983819}
-  healDelay: 0
+  healDelay: 2
 --- !u!1 &1970202391
 GameObject:
   m_ObjectHideFlags: 0
@@ -30507,6 +30507,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 392402500242344437, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 392402500242344437, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 2093929158782011437, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
       propertyPath: playerNum
       value: 1
@@ -30875,4 +30883,4 @@ MonoBehaviour:
   arrows1: {fileID: 1818640114}
   arrows2: {fileID: 1961648762}
   arrows3: {fileID: 7609919871797983819}
-  healDelay: 0
+  healDelay: 2

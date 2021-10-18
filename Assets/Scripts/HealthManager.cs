@@ -13,8 +13,8 @@ public class HealthManager : MonoBehaviour
 
     public float healDelay;
     
-    private bool HealedRecently;
-    private bool HealingNow;
+    private bool HealedRecently =false;
+    private bool HealingNow = false;
 
     public void Start()
     {
@@ -43,17 +43,17 @@ public class HealthManager : MonoBehaviour
 
     public IEnumerator Heal()
     {
-        while (currentHealth < maxHealth)
-        {
             if (HealedRecently == false && currentHealth < maxHealth)
             {
+                yield return new WaitForSeconds(healDelay);
+                
+
                 currentHealth++;
                 HealedRecently = true;
             }
-
-            yield return new WaitForSeconds(healDelay);
-            HealedRecently = false;
-        }
+        yield return new WaitForSeconds(healDelay);
+        HealedRecently = false;
+        HealingNow = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
