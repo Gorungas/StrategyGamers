@@ -59,7 +59,9 @@ public class MeleeAttack : MonoBehaviour
             attEffects[direction].SetActive(true);
         }
         DetectAttack(direction);
+        movement.canMove = false;
         yield return new WaitForSeconds(duration);
+        movement.canMove = true;
         if (attEffects[direction] != null)
         {
             attEffects[direction].SetActive(false);

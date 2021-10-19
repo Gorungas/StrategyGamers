@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public bool canMove=true;
     private string hor;
     private string vert;
 
@@ -29,7 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Vector2 move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
+        Vector2 move = Vector2.zero;
+        if (canMove)
+        {
+            move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert)) * speed;
+        }
+        //move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
         _animator.SetFloat("Hor",Mathf.Abs(move.x));
         _animator.SetFloat("Ver", move.y);
         if (move.x < -0.1f)

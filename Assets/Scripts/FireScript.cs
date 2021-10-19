@@ -21,9 +21,12 @@ public class FireScript : MonoBehaviour
     public float coolDown;
 
     public int dmg;
+
+    private PlayerMovement movement;
     void Start()
     {
         playerNum = GetComponent<PlayerNumberManager>().playerNum;
+        movement = GetComponent<PlayerMovement>();
         button = "Fire" + playerNum;
         soldiers = GetComponent<SoilderManager>().soldiers;
     }
@@ -39,6 +42,8 @@ public class FireScript : MonoBehaviour
     IEnumerator Shoot()
     {
         canFire = false;
+        movement.canMove = false;
+        yield return new WaitForSeconds(0.3f);
         //dmg = manager.soldiers.Count;
         foreach (GameObject soldier in soldiers) {
             float distance = Vector2.Distance(soldier.transform.position, reticle.transform.position);
@@ -54,6 +59,8 @@ public class FireScript : MonoBehaviour
                 newArrow.GetComponent<ArrowScript>().SetArrow(dmg,playerNum, arrowLifetime);
             }
         }
+        yield return new WaitForSeconds(0.3f);
+        movement.canMove = true;
         yield return new WaitForSeconds(coolDown);
         canFire = true;
         //Vector2 shotDir = new Vector2(transform.position.x - reticle.transform.position.x, transform.position.y - reticle.transform.position.y) * -1;
