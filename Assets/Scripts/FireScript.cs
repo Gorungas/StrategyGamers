@@ -43,11 +43,13 @@ public class FireScript : MonoBehaviour
         foreach (GameObject soldier in soldiers) {
             float distance = Vector2.Distance(soldier.transform.position, reticle.transform.position);
             Vector2 shotDir = new Vector2((soldier.transform.position.x - reticle.transform.position.x)/distance, (soldier.transform.position.y - reticle.transform.position.y)/distance) * -1;
-            float angle = Vector2.Angle(soldier.transform.forward, reticle.transform.forward);
-            Debug.Log(shotDir);
+            float angle = Mathf.Atan2(shotDir.y*distance, shotDir.x*distance) * Mathf.Rad2Deg;
+            //Debug.Log(shotDir);
+            //Debug.Log(angle);
             if (shotDir != new Vector2(0.0f, 0.0f))
             {
-                GameObject newArrow = Instantiate(arrow, soldier.transform.position, Quaternion.Euler(0, 0, angle));
+                GameObject newArrow = Instantiate(arrow, soldier.transform.position, Quaternion.Euler(0,0,angle+90));
+                //newArrow.transform.LookAt(reticle.transform);
                 newArrow.gameObject.GetComponent<Rigidbody2D>().velocity = shotDir * bulletSpeed;
                 newArrow.GetComponent<ArrowScript>().SetArrow(dmg,playerNum, arrowLifetime);
             }

@@ -23,7 +23,7 @@ public class ArrowScript : MonoBehaviour
         Destroy(gameObject,lifeTime);
         damage = dmg;
         this.playerNum = playerNum;
-        GetComponent<SpriteRenderer>().color = colors[playerNum];
+        GetComponent<SpriteRenderer>().color = colors[playerNum-1];
 
     }
     void OnTriggerEnter2D(Collider2D collision)

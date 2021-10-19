@@ -12,6 +12,6 @@ public class ReticleScript : MonoBehaviour
     }
     void Update()
     {
-        reticle.position = king.position + new Vector3(2 * Input.GetAxis("Horizontal" + playerNum), 2 * Input.GetAxis("Vertical" + playerNum), 0);
+        reticle.position = king.position + new Vector3(3 * Input.GetAxis("Horizontal" + playerNum), 3 * Input.GetAxis("Vertical" + playerNum), 0);
     }
 }

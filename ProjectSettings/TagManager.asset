@@ -54,6 +54,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Text
+  - name: Arrow
     uniqueID: 55671319
     locked: 0
