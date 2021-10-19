@@ -22,7 +22,8 @@ public class JuggGrowthScript : MonoBehaviour
     public void LevelUp()
     {
         level+=1;
-        transform.localScale+=new Vector3(scaleGrowth,scaleGrowth,0);
+        playerMovement.scale += scaleGrowth;
+        transform.localScale += new Vector3(0, scaleGrowth,0);
         playerMovement.speed+=speedGrowth;
     }
 }

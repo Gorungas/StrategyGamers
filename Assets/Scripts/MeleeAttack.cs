@@ -82,6 +82,7 @@ public class MeleeAttack : MonoBehaviour
         //Debug.Log(enemys);
         foreach (Collider2D enemy in enemys)
         {
+            Debug.Log("Hit");
             float xPos = enemy.transform.position.x - transform.position.x;
             xPos = Mathf.Sign(xPos);
             Vector2 force = new Vector2(attForce.x * xPos, attForce.y);

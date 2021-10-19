@@ -57359,22 +57359,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8849963526130114600, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
   m_PrefabInstance: {fileID: 392402501374664865}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1818640111 stripped
+--- !u!114 &1818640114 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6416925262683572961, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5610825987779175656, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
   m_PrefabInstance: {fileID: 392402501374664865}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1818640105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36be89e72b68244d6998a0b569b168b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1818640114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818640105}
   m_Enabled: 1
@@ -57382,14 +57370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fa6d070731ae349b428fbc99a356e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 7885209159362568347, guid: 493e5cdcb68732c4d81a1edb059d3ecb, type: 3}
-  reticle: {fileID: 843269944}
-  bulletSpeed: 3
-  manager: {fileID: 1818640111}
-  arrowDelay: 0
-  initialArrowDelay: 2
-  arrowLifetime: 4
-  dmg: 0
 --- !u!114 &1818640115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57405,9 +57385,6 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   playerNum: 0
-  arrows1: {fileID: 1818640114}
-  arrows2: {fileID: 1961648762}
-  arrows3: {fileID: 7609919871797983819}
   healDelay: 2
 --- !u!1 &1888069672
 GameObject:
@@ -57461,37 +57438,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9197323571000292631, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
   m_PrefabInstance: {fileID: 2009400927}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1961648762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961648761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fa6d070731ae349b428fbc99a356e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 3185101880070281880, guid: 0f028696b0cd8ed488b0395d427dda75, type: 3}
-  reticle: {fileID: 843269944}
-  bulletSpeed: 3
-  manager: {fileID: 1961648767}
-  arrowDelay: 0
-  initialArrowDelay: 2
-  arrowLifetime: 4
-  dmg: 0
---- !u!114 &1961648767 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6665160845780492254, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
-  m_PrefabInstance: {fileID: 2009400927}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961648761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36be89e72b68244d6998a0b569b168b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1961648770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57507,9 +57453,6 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   playerNum: 0
-  arrows1: {fileID: 1818640114}
-  arrows2: {fileID: 1961648762}
-  arrows3: {fileID: 7609919871797983819}
   healDelay: 2
 --- !u!1 &1970202391
 GameObject:
@@ -58188,7 +58131,7 @@ PrefabInstance:
     - target: {fileID: 6888706826264549778, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: arrows2
       value: 
-      objectReference: {fileID: 1961648762}
+      objectReference: {fileID: 0}
     - target: {fileID: 6888706826264549778, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: arrows3
       value: 
@@ -58381,27 +58324,15 @@ MonoBehaviour:
   arrow: {fileID: 4246409560302756578, guid: 1dc74cf7b404f2c47a1ea570580b1d7e, type: 3}
   reticle: {fileID: 843269944}
   bulletSpeed: 3
-  manager: {fileID: 7609919871797983825}
-  arrowDelay: 0
-  initialArrowDelay: 2
+  soldiers: []
   arrowLifetime: 4
+  coolDown: 0
   dmg: 0
 --- !u!4 &7609919871797983820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6298776153868329079, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
   m_PrefabInstance: {fileID: 7609919871797983816}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7609919871797983825 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6665160845780492254, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
-  m_PrefabInstance: {fileID: 7609919871797983816}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7609919871797983817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36be89e72b68244d6998a0b569b168b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7609919871797983827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58417,7 +58348,4 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   playerNum: 0
-  arrows1: {fileID: 1818640114}
-  arrows2: {fileID: 1961648762}
-  arrows3: {fileID: 7609919871797983819}
   healDelay: 2

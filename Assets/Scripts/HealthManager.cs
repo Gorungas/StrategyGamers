@@ -7,9 +7,9 @@ public class HealthManager : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public int playerNum;
-    public FireScript arrows1;
-    public FireScript arrows2;
-    public FireScript arrows3;
+    //public FireScript arrows1;
+    //public FireScript arrows2;
+    //public FireScript arrows3;
 
     public float healDelay;
     
@@ -18,7 +18,11 @@ public class HealthManager : MonoBehaviour
 
     public void Start()
     {
-        playerNum = GetComponent<PlayerNumberManager>().playerNum;
+        if (!CompareTag("Village"))
+        {
+            playerNum = GetComponent<PlayerNumberManager>().playerNum;
+        }
+        
     }
 
     private void Update()
@@ -56,27 +60,27 @@ public class HealthManager : MonoBehaviour
         HealingNow = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Arrow") && playerNum != 1)
-        {
-            TakeDamage(arrows1.dmg);
-            Destroy(other.gameObject);
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Arrow") && playerNum != 1)
+    //    {
+    //        TakeDamage(arrows1.dmg);
+    //        Destroy(other.gameObject);
 
-        }
-        else if (other.CompareTag("Arrow2") && playerNum != 2)
-        {
-            TakeDamage(arrows2.dmg);
-            Destroy(other.gameObject);
-
-
-        }
-        else if (other.CompareTag("Arrow3") && playerNum != 3)
-        {
-            TakeDamage(arrows3.dmg);
-            Destroy(other.gameObject);
+    //    }
+    //    else if (other.CompareTag("Arrow2") && playerNum != 2)
+    //    {
+    //        TakeDamage(arrows2.dmg);
+    //        Destroy(other.gameObject);
 
 
-        }
-    }
+    //    }
+    //    else if (other.CompareTag("Arrow3") && playerNum != 3)
+    //    {
+    //        TakeDamage(arrows3.dmg);
+    //        Destroy(other.gameObject);
+
+
+    //    }
+    //}
 }

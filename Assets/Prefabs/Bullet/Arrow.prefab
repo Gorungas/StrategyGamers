@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4587496384248205937}
   - component: {fileID: 2104120847582006144}
   - component: {fileID: 6039632458320375834}
+  - component: {fileID: -2921807799398131722}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Arrow
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
-  m_Color: {r: 0.5188679, g: 0.35042253, b: 0.20803666, a: 1}
+  m_Color: {r: 0.90196085, g: 0.7607844, b: 0.9607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,3 +139,21 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.02734375}
       - {x: 0.5, y: 0.015625}
       - {x: 0.0703125, y: 0.25}
+--- !u!114 &-2921807799398131722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885209159362568347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a7529d3e32e464ea0fe2cf23ff4201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.93725497, g: 0.8431373, b: 0.9686275, a: 1}
+  - {r: 1, g: 0.098039225, b: 0.003921569, a: 1}
+  - {r: 0.34901962, g: 0.1764706, b: 0.35686275, a: 1}
+  playerNum: 0
+  damage: 0

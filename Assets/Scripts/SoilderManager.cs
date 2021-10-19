@@ -7,10 +7,11 @@ public class SoilderManager : MonoBehaviour
     public Transform[] soldiersPoses;
     public List<GameObject> soldiers;
     public GameObject soldierPrefab;
+    int playerNum;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerNum = GetComponent<PlayerNumberManager>().playerNum;
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class SoilderManager : MonoBehaviour
             index = soldiers.Count;
             soldiers.Add(soldier);
         }
+        soldier.GetComponent<PlayerNumberManager>().playerNum = playerNum;
         soldier.GetComponent<SoilderFollow>().followPos = soldiersPoses[index];
     }
     public int SetSoldier(int num)

@@ -106,7 +106,7 @@ MonoBehaviour:
   - {fileID: 430520866674651928, guid: 4553bf693556544ad9952654b10a3a53, type: 3}
   maxVilligers: 10
   recoverTime: 15
-  captureTime: 3
+  captureTime: 1
   numTxt: {fileID: 2055152708968904596}
   sr: {fileID: 5321374389568759577}
   transparentColor: {r: 1, g: 1, b: 1, a: 0.11764706}
