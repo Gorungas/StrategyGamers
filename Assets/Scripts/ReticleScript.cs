@@ -16,7 +16,7 @@ public class ReticleScript : MonoBehaviour
     void Update()
     {
         if (!healthMan.isDead)
-            reticle.position = king.position + new Vector3(3 * Input.GetAxis("Horizontal" + playerNum), 3 * Input.GetAxis("Vertical" + playerNum), 0);
+            reticle.position = king.position + new Vector3(2 * Input.GetAxis("Horizontal" + playerNum), 2 * Input.GetAxis("Vertical" + playerNum), 0);
         else if (healthMan.isDead)
         {
             reticle.gameObject.SetActive(false);
