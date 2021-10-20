@@ -7,10 +7,14 @@ public class ArrowScript : MonoBehaviour
     public Color[] colors;
     public int playerNum;
     public int damage;
+
+    AudioSource Source;
+    public AudioClip Hitsound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Source = FindObjectOfType<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class ArrowScript : MonoBehaviour
             if (collision.GetComponent<PlayerNumberManager>().playerNum != playerNum)
             {
                 collision.GetComponent<HealthManager>().TakeDamage(damage);
+                Source.PlayOneShot(Hitsound);
                 Destroy(gameObject);
             }
         }

@@ -10,6 +10,10 @@ public class FireScript : MonoBehaviour
     public GameObject arrow;
     public GameObject reticle;
     public float bulletSpeed;
+
+    AudioSource source;
+    public AudioClip bowShot;
+    
     //public SoilderManager manager;
     public List<GameObject> soldiers;
 
@@ -29,6 +33,7 @@ public class FireScript : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         button = "Fire" + playerNum;
         soldiers = GetComponent<SoilderManager>().soldiers;
+        source = FindObjectOfType<AudioSource>();
     }
 
     void Update()
@@ -57,6 +62,8 @@ public class FireScript : MonoBehaviour
                 //newArrow.transform.LookAt(reticle.transform);
                 newArrow.gameObject.GetComponent<Rigidbody2D>().velocity = shotDir * bulletSpeed;
                 newArrow.GetComponent<ArrowScript>().SetArrow(dmg,playerNum, arrowLifetime);
+                source.PlayOneShot(bowShot);
+                
             }
         }
         yield return new WaitForSeconds(0.3f);
