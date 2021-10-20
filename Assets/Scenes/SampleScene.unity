@@ -63788,6 +63788,10 @@ PrefabInstance:
       propertyPath: playerNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2840393621063439287, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a231462fab9846bebcdb0cb2673f1fd, type: 3}
     - target: {fileID: 5182211728548994043, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -64084,6 +64088,10 @@ PrefabInstance:
       propertyPath: playerNum
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2457009425256220296, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dca4a1ab113924862979a7a7ac15dee5, type: 3}
     - target: {fileID: 5610825987779175656, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
       propertyPath: coolDownBar
       value: 
@@ -64397,6 +64405,10 @@ PrefabInstance:
       propertyPath: healDelay
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2840393621063439287, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a6b51b9b73e2942aa9834abf5715ee0c, type: 3}
     - target: {fileID: 5182211728548994043, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
       propertyPath: m_Sprite
       value: 
