@@ -39,8 +39,9 @@ public class MeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canAtt & Input.GetButtonDown(button))
+        if (canAtt && Input.GetButtonDown(button))
         {
+            Debug.Log(button);
             canAtt = false;
             //audioSource.PlayOneShot(attClip);
             

@@ -29,7 +29,7 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentHealth < maxHealth && HealingNow == false && !isDead)
+        if ((!CompareTag("Jugg"))&&currentHealth < maxHealth && HealingNow == false && !isDead)
         {
             StartCoroutine(Heal());
             HealingNow = true;
