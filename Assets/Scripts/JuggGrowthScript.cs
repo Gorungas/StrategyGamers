@@ -26,7 +26,7 @@ public class JuggGrowthScript : MonoBehaviour
         level+=1;
         playerMovement.scale += scaleGrowth;
         transform.localScale += new Vector3(0, scaleGrowth,0);
-        melee.attVal = 5+level/3;
+        melee.attVal = 3+level/3;
         playerMovement.speed+=speedGrowth;
     }
 }

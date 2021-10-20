@@ -43,12 +43,9 @@ public class ArrowScript : MonoBehaviour
         }
         if (collision.CompareTag("Village"))
         {
-            if (collision.GetComponent<PlayerNumberManager>().playerNum != playerNum && !collision.GetComponent<HealthManager>().isDead)
-            {
-                collision.GetComponent<HealthManager>().TakeDamage(damage);
-                Source.PlayOneShot(Hitsound);
-                Destroy(gameObject);
-            }
+            Source.PlayOneShot(Hitsound);
+            Destroy(gameObject);
         }
     }
+    
 }
