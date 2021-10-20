@@ -34,7 +34,7 @@ public class ArrowScript : MonoBehaviour
     {
         if (collision.CompareTag("Jugg")||collision.CompareTag("Soldier")|| collision.CompareTag("King"))
         {
-            if (collision.GetComponent<PlayerNumberManager>().playerNum != playerNum)
+            if (collision.GetComponent<PlayerNumberManager>().playerNum != playerNum && !collision.GetComponent<HealthManager>().isDead)
             {
                 collision.GetComponent<HealthManager>().TakeDamage(damage);
                 Source.PlayOneShot(Hitsound);
