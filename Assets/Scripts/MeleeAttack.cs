@@ -21,6 +21,10 @@ public class MeleeAttack : MonoBehaviour
     //public AudioClip hitClip;
     public float coolDown;
     public GameObject[] attEffects;
+    public Transform[] attStartPoint;
+    public Transform[] attEndPoint;
+
+    public CoolDownBarScript coolDownBar;
     //public Sprite coolSprite;
     // Start is called before the first frame update
     void Start()
@@ -72,15 +76,17 @@ public class MeleeAttack : MonoBehaviour
         //    sr.sprite = coolSprite;
         //}
         //else { sr.sprite = idleSprite; }
+        coolDownBar.StartCoolDown(coolDown);
         yield return new WaitForSeconds(coolDown);
         //sr.sprite = idleSprite;
         canAtt = true;
     }
     public void DetectAttack(int direction)
     {
-        float angle = 0;
-        if (direction == 2) { angle = 90; }
-        Collider2D[] enemys = Physics2D.OverlapBoxAll(attEffects[direction].transform.position, attackSize, angle, attckObj);
+        //float angle = 0;
+        //if (direction == 2) { angle = 90; }
+        
+        Collider2D[] enemys = Physics2D.OverlapAreaAll(attStartPoint[direction].position, attEndPoint[direction].position, attckObj);
         //Debug.Log(enemys);
         foreach (Collider2D enemy in enemys)
         {

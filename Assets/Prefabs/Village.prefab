@@ -164,12 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3303ed817dc88a74eaf48f72cd621e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 15
+  currentHealth: 15
   playerNum: 0
-  arrows1: {fileID: 0}
-  arrows2: {fileID: 0}
-  arrows3: {fileID: 0}
   healDelay: 3
 --- !u!1 &697771625772051632
 GameObject:
