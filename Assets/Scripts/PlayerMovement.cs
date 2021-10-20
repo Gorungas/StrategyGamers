@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public bool canMove=true;
+    private bool stopMove;
     private string hor;
     private string vert;
-
+    private string stop;
     public float speed;
 
     private Rigidbody2D rb;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
+        stop = "Stop" + playerNum;
         _animator = GetComponent<Animator>();
         _soldierAnimator = GetComponent<Animator>();
         healthMan = GetComponent<HealthManager>();
@@ -35,8 +37,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (canMove)
+        {
+            if (Input.GetButton(stop))
+            {
+                stopMove = true;
+            }
+            else
+            {
+                stopMove = false;
+            }
+        }
         Vector2 move = Vector2.zero;
-        if (canMove && !healthMan.isDead)
+        if ((!stopMove)&&canMove && !healthMan.isDead)
         {
             move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert)) * speed;
         }
