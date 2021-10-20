@@ -16,6 +16,8 @@ public class HealthManager : MonoBehaviour
     public bool isDead = false;
 
     private Animator _animator;
+    private AudioSource Source;
+    public AudioClip deathSound;
 
     public void Start()
     {
@@ -49,6 +51,7 @@ public class HealthManager : MonoBehaviour
             if (currentHealth <= 0)
             {
                 isDead = true;
+                Source.PlayOneShot(deathSound);
                 _animator.SetBool("IsDead", true);
             }
         }
