@@ -334,7 +334,7 @@ MonoBehaviour:
   attackSize: {x: 0, y: 0}
   attckObj:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 832
   attVal: 2
   attForce: {x: 0, y: 0}
   coolDown: 1
