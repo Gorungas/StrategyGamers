@@ -36,7 +36,7 @@ public class FireScript : MonoBehaviour
     {
         playerNum = GetComponent<PlayerNumberManager>().playerNum;
         movement = GetComponent<PlayerMovement>();
-        button = "Fire" + playerNum;
+        button = "Attack" + playerNum;
         soldiers = GetComponent<SoilderManager>().soldiers;
         source = FindObjectOfType<AudioSource>();
         coolDownBar.icon.color = arrowColor;
