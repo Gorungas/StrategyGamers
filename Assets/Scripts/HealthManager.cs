@@ -57,6 +57,10 @@ public class HealthManager : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
+                else if (CompareTag("Soldier"))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
 
