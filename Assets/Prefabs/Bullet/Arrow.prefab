@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7885209159362568347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.9178295, y: 12.285285, z: 0}
-  m_LocalScale: {x: 0.2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 55671319
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f8f56ddf1ed1485c820eac6b8289540, type: 3}
   m_Color: {r: 0.90196085, g: 0.7607844, b: 0.9607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -131,13 +131,25 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.02734375, y: 0.25}
-      - {x: -0.5, y: 0.02734375}
-      - {x: -0.5, y: -0.015625}
-      - {x: -0.0703125, y: -0.25}
-      - {x: 0.02734375, y: -0.25}
-      - {x: 0.5, y: -0.02734375}
-      - {x: 0.5, y: 0.015625}
+    - - {x: 0.06061268, y: 0.37104607}
+      - {x: -0.0673542, y: 0.3746357}
+      - {x: -0.06361103, y: 0.25374985}
+      - {x: -0.12311745, y: 0.24994278}
+      - {x: -0.12775517, y: 0.12406731}
+      - {x: -0.18948841, y: 0.12524128}
+      - {x: -0.18663979, y: -0.18085194}
+      - {x: -0.13013554, y: -0.18447971}
+      - {x: -0.12648773, y: -0.31267262}
+      - {x: -0.061314583, y: -0.31418705}
+      - {x: -0.058491707, y: -0.37287235}
+      - {x: 0.058657646, y: -0.37216187}
+      - {x: 0.06018257, y: -0.30988598}
+      - {x: 0.124362946, y: -0.30980587}
+      - {x: 0.121118546, y: -0.18972206}
+      - {x: 0.17809296, y: -0.18663502}
+      - {x: 0.18571949, y: 0.12695217}
+      - {x: 0.12395954, y: 0.12734604}
+      - {x: 0.12406254, y: 0.24504662}
       - {x: 0.0703125, y: 0.25}
 --- !u!114 &-2921807799398131722
 MonoBehaviour:
@@ -157,3 +169,4 @@ MonoBehaviour:
   - {r: 0.34901962, g: 0.1764706, b: 0.35686275, a: 1}
   playerNum: 0
   damage: 0
+  Hitsound: {fileID: 8300000, guid: 6c86fc141ea604b1f96c85228e34303b, type: 3}

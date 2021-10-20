@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowScript : MonoBehaviour
 {
-    public Color[] colors;
+    //public Color[] colors;
     public int playerNum;
     public int damage;
 
@@ -27,7 +27,7 @@ public class ArrowScript : MonoBehaviour
         Destroy(gameObject,lifeTime);
         damage = dmg;
         this.playerNum = playerNum;
-        GetComponent<SpriteRenderer>().color = colors[playerNum-1];
+        //GetComponent<SpriteRenderer>().color = colors[playerNum-1];
 
     }
     void OnTriggerEnter2D(Collider2D collision)

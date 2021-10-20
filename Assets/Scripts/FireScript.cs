@@ -21,10 +21,12 @@ public class FireScript : MonoBehaviour
     //public float initialArrowDelay;
 
     public float arrowLifetime;
-
     public float coolDown;
-
     public int dmg;
+
+    public Color arrowColor;
+
+    public CoolDownBarScript coolDownBar;
 
     private PlayerMovement movement;
     void Start()
@@ -34,11 +36,12 @@ public class FireScript : MonoBehaviour
         button = "Fire" + playerNum;
         soldiers = GetComponent<SoilderManager>().soldiers;
         source = FindObjectOfType<AudioSource>();
+        coolDownBar.icon.color = arrowColor;
     }
 
     void Update()
     {
-        if (canFire&&Input.GetButton(button))
+        if (canFire&&Input.GetButton(button)&&soldiers.Count>0)
         {
             StartCoroutine(Shoot());
 
@@ -48,6 +51,7 @@ public class FireScript : MonoBehaviour
     {
         canFire = false;
         movement.canMove = false;
+        source.PlayOneShot(bowShot);
         yield return new WaitForSeconds(0.3f);
         //dmg = manager.soldiers.Count;
         foreach (GameObject soldier in soldiers) {
@@ -60,14 +64,16 @@ public class FireScript : MonoBehaviour
             {
                 GameObject newArrow = Instantiate(arrow, soldier.transform.position, Quaternion.Euler(0,0,angle+90));
                 //newArrow.transform.LookAt(reticle.transform);
+                newArrow.GetComponent<SpriteRenderer>().color = arrowColor;
                 newArrow.gameObject.GetComponent<Rigidbody2D>().velocity = shotDir * bulletSpeed;
                 newArrow.GetComponent<ArrowScript>().SetArrow(dmg,playerNum, arrowLifetime);
-                source.PlayOneShot(bowShot);
+                
                 
             }
         }
         yield return new WaitForSeconds(0.3f);
         movement.canMove = true;
+        coolDownBar.StartCoolDown(coolDown);
         yield return new WaitForSeconds(coolDown);
         canFire = true;
         //Vector2 shotDir = new Vector2(transform.position.x - reticle.transform.position.x, transform.position.y - reticle.transform.position.y) * -1;

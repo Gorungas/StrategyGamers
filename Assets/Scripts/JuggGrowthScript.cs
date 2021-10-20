@@ -8,10 +8,12 @@ public class JuggGrowthScript : MonoBehaviour
     public float scaleGrowth;
     public float speedGrowth;
     private PlayerMovement playerMovement;
+    private MeleeAttack melee;
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        melee = GetComponent<MeleeAttack>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class JuggGrowthScript : MonoBehaviour
         level+=1;
         playerMovement.scale += scaleGrowth;
         transform.localScale += new Vector3(0, scaleGrowth,0);
+        melee.attVal += 1;
         playerMovement.speed+=speedGrowth;
     }
 }

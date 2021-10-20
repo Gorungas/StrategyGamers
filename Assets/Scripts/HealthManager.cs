@@ -36,10 +36,9 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if (currentHealth != 0)
-            currentHealth -= dmg;
+        currentHealth -= dmg;
 
-        else if (currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
         }
