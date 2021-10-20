@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1838770120749113374}
   - component: {fileID: 8490676728055333392}
   - component: {fileID: 8420989645703691841}
+  - component: {fileID: -8886499703016911125}
   m_Layer: 0
   m_Name: Soilder
   m_TagString: Soldier
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2470878864139071212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.3, y: 13.24, z: 0}
-  m_LocalScale: {x: 0.4028159, y: 0.4028159, z: 0.4028159}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 5135215139734663885, guid: 16572c02e0aa19f49b833e25358be210, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.9166667, y: 1.4166666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -156,6 +157,7 @@ MonoBehaviour:
   currentHealth: 2
   playerNum: 0
   healDelay: 5
+  isDead: 0
 --- !u!114 &8420989645703691841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,3 +171,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 0
+--- !u!95 &-8886499703016911125
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470878864139071212}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0161d3a37c810304abe5b6db3ca5d1c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

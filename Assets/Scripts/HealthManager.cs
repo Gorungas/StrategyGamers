@@ -34,6 +34,10 @@ public class HealthManager : MonoBehaviour
             StartCoroutine(Heal());
             HealingNow = true;
         }
+        else if (isDead)
+        {
+            currentHealth = 0;
+        }
     }
 
     public void TakeDamage(int dmg)

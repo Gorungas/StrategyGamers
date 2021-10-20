@@ -29,6 +29,9 @@ public class FireScript : MonoBehaviour
     public CoolDownBarScript coolDownBar;
 
     private PlayerMovement movement;
+
+    
+
     void Start()
     {
         playerNum = GetComponent<PlayerNumberManager>().playerNum;

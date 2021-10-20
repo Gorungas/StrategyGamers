@@ -12,12 +12,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator _animator;
+    private Animator _soldierAnimator;
     public float scale = 1;
 
     HealthManager healthMan;
 
     public enum FaceDirection {Up,Down,Right };
     public FaceDirection face=FaceDirection.Down;
+
     void Start()
     {
         int playerNum = GetComponent<PlayerNumberManager>().playerNum;
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
         _animator = GetComponent<Animator>();
+        _soldierAnimator = GetComponent<Animator>();
         healthMan = GetComponent<HealthManager>();
     }
 
@@ -40,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         //move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
         _animator.SetFloat("Hor",Mathf.Abs(move.x));
         _animator.SetFloat("Ver", move.y);
+        _soldierAnimator.SetFloat("Hor", Mathf.Abs(move.x));
+        _soldierAnimator.SetFloat("Ver", move.y);
         if (move.x < -0.1f)
         {
             transform.localScale = new Vector2(-scale, transform.localScale.y);
