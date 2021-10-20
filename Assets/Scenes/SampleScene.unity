@@ -338,11 +338,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5916507755223414088, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
   m_PrefabInstance: {fileID: 392402501374664865}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &99647423 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1140923594, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
-  m_PrefabInstance: {fileID: 2009400927}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &168225185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6298776153868329079, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
@@ -62219,11 +62214,6 @@ MonoBehaviour:
   villagePrefab: {fileID: 3532183522163729768, guid: 49e63dfd2e81b794a8cedf6baf78c940, type: 3}
   villageArray: []
   possibleLocation: []
---- !u!4 &1372998437 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1140923594, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
-  m_PrefabInstance: {fileID: 7609919871797983816}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1411322850
 GameObject:
   m_ObjectHideFlags: 0
@@ -62883,7 +62873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553d8d06e51a434d93f7a938b51237c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 99647423}
+  playerPos: {fileID: 168225185}
   t: 0
 --- !u!81 &1593932419
 AudioListener:
@@ -63618,7 +63608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553d8d06e51a434d93f7a938b51237c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 1372998437}
+  playerPos: {fileID: 7609919871797983820}
   t: 0
 --- !u!81 &1973637181
 AudioListener:
@@ -64227,7 +64217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353602923916755865, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: playerNum
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}

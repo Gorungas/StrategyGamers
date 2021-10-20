@@ -51,8 +51,12 @@ public class HealthManager : MonoBehaviour
             if (currentHealth <= 0)
             {
                 isDead = true;
-                Source.PlayOneShot(deathSound);
+                //Source.PlayOneShot(deathSound);
                 _animator.SetBool("IsDead", true);
+                if (CompareTag("Village"))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
 
