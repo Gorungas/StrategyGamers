@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     public float scale = 1;
 
+    HealthManager healthMan;
+
     public enum FaceDirection {Up,Down,Right };
     public FaceDirection face=FaceDirection.Down;
     void Start()
@@ -24,13 +26,14 @@ public class PlayerMovement : MonoBehaviour
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
         _animator = GetComponent<Animator>();
+        healthMan = GetComponent<HealthManager>();
     }
 
 
     void Update()
     {
         Vector2 move = Vector2.zero;
-        if (canMove)
+        if (canMove && !healthMan.isDead)
         {
             move = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert)) * speed;
         }

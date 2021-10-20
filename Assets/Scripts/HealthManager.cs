@@ -7,17 +7,19 @@ public class HealthManager : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public int playerNum;
-    //public FireScript arrows1;
-    //public FireScript arrows2;
-    //public FireScript arrows3;
 
     public float healDelay;
     
     private bool HealedRecently =false;
     private bool HealingNow = false;
 
+    public bool isDead = false;
+
+    private Animator _animator;
+
     public void Start()
     {
+        _animator = GetComponent<Animator>();
         if (!CompareTag("Village"))
         {
             playerNum = GetComponent<PlayerNumberManager>().playerNum;
@@ -27,7 +29,7 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentHealth < maxHealth && HealingNow == false)
+        if (currentHealth < maxHealth && HealingNow == false && !isDead)
         {
             StartCoroutine(Heal());
             HealingNow = true;
@@ -36,17 +38,22 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        currentHealth -= dmg;
-
-        if (currentHealth <= 0)
+        if (!isDead)
         {
-            Destroy(this.gameObject);
+            currentHealth -= dmg;
+
+            if (currentHealth <= 0)
+            {
+                isDead = true;
+                _animator.SetBool("IsDead", true);
+            }
         }
+
     }
 
     public IEnumerator Heal()
     {
-            if (HealedRecently == false && currentHealth < maxHealth)
+            if (HealedRecently == false && currentHealth < maxHealth && !isDead)
             {
                 yield return new WaitForSeconds(healDelay);
                 
@@ -58,28 +65,4 @@ public class HealthManager : MonoBehaviour
         HealedRecently = false;
         HealingNow = false;
     }
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Arrow") && playerNum != 1)
-    //    {
-    //        TakeDamage(arrows1.dmg);
-    //        Destroy(other.gameObject);
-
-    //    }
-    //    else if (other.CompareTag("Arrow2") && playerNum != 2)
-    //    {
-    //        TakeDamage(arrows2.dmg);
-    //        Destroy(other.gameObject);
-
-
-    //    }
-    //    else if (other.CompareTag("Arrow3") && playerNum != 3)
-    //    {
-    //        TakeDamage(arrows3.dmg);
-    //        Destroy(other.gameObject);
-
-
-    //    }
-    //}
 }
