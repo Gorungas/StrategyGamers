@@ -4,22 +4,22 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
-public class CharSelect : MonoBehaviour
+public class SelectMove : MonoBehaviour
 {
     public int playerNum;
-    private bool canMove  = true;
-    private int index;
-    public  Transform[] pos;
-    // Start is called before the first frame update
+    public Transform[] pos;
+    private int index = 0;
+    private bool canMove = true;
+
     void Start()
     {
-        
+        index = playerNum - 1;
+        transform.position = pos[index].position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Horizontal")  +  playerNum > 0  && canMove)
+        if (Input.GetAxisRaw("Horizontal" + playerNum) > 0 && canMove)
         {
             do
             {
@@ -31,7 +31,7 @@ public class CharSelect : MonoBehaviour
             transform.position = pos[index].position;
             canMove = false;
         }
-        else  if  (Input.GetAxisRaw("Horizontal" + playerNum)  <  0  &&  canMove)
+        else if (Input.GetAxisRaw("Horizontal" + playerNum) < 0 && canMove)
         {
             do
             {
@@ -42,9 +42,8 @@ public class CharSelect : MonoBehaviour
 
             transform.position = pos[index].position;
             canMove = false;
-
         }
-        else if(Input.GetAxisRaw("Horizontal") + playerNum ==  0 && PublicVars.characters[playerNum-1] == -1)
+        else if (Input.GetAxisRaw("Horizontal" + playerNum) == 0 && PublicVars.characters[playerNum - 1] == -1)
         {
             canMove = true;
         }
@@ -59,7 +58,15 @@ public class CharSelect : MonoBehaviour
             else
             {
                 PublicVars.characters[index] = playerNum;
-                //pos[index].
+                pos[index].gameObject.GetComponent<SpriteRenderer>().color = Color.gray;
+                canMove = false;
+
+                print("player" + PublicVars.characters[index] + " is " + index);
+                if (!PublicVars.characters.Contains(-1))
+                {
+                    SceneManager.LoadScene("Level1");
+                }
+
             }
         }
     }
