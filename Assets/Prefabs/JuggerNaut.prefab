@@ -350,6 +350,7 @@ MonoBehaviour:
   - {fileID: 1000001488663822913}
   - {fileID: 590080197532746430}
   - {fileID: 7839044731863760563}
+  coolDownBar: {fileID: 0}
 --- !u!114 &8353602923916755865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +392,8 @@ MonoBehaviour:
   currentHealth: 60
   playerNum: 0
   healDelay: 0
+  isDead: 0
+  deathSound: {fileID: 0}
 --- !u!114 &2122144045991104578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0c1659683ea4d6bb7d5a07c29b999d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
   scaleGrowth: 0.1
   speedGrowth: 0.3
 --- !u!1 &5704682580611229444

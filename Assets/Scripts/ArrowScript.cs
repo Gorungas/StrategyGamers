@@ -43,7 +43,9 @@ public class ArrowScript : MonoBehaviour
         }
         if (collision.CompareTag("Village"))
         {
+            Source.PlayOneShot(Hitsound);
             Destroy(gameObject);
         }
     }
+    
 }
