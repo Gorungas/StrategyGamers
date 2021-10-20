@@ -7,6 +7,7 @@ public class DashScript : MonoBehaviour
     private int playerNum;
     private string button;
     Rigidbody2D rb;
+    public float cooldDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,8 @@ public class DashScript : MonoBehaviour
             
         }
     }
-
+    IEnumerator Dash()
+    {
+        yield return null;
+    }
 }
