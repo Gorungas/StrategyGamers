@@ -87,6 +87,10 @@ public class PlayerMovement : MonoBehaviour
         {
             face = FaceDirection.Down;
         }
-        rb.velocity = move;
+        if (canMove)
+        {
+            rb.velocity = move;
+        }
+        //rb.velocity = move;
     }
 }

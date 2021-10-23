@@ -50494,6 +50494,153 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1674529208057244121, guid: 4b8e8388998aba14b83c0db7c41ebe5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4b8e8388998aba14b83c0db7c41ebe5e, type: 3}
+--- !u!1 &1069566307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8849963526130114600, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+  m_PrefabInstance: {fileID: 392402501374664865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1069566308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069566307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8603aeb9fd84779980d70807ca994f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDown: 5
+  dashSpeed: 6
+  dashTime: 0.5
+  reticle: {fileID: 1889826253}
+  coolDownBar: {fileID: 1103962209}
+--- !u!1001 &1103962207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1970202395}
+    m_Modifications:
+    - target: {fileID: 5609725560721371692, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725560721371692, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719106, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_Name
+      value: Cooldown(king1) (Dash)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 62.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 62.194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 509.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609725561750880450, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+--- !u!224 &1103962208 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+  m_PrefabInstance: {fileID: 1103962207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1103962209 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5975593837224021358, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
+  m_PrefabInstance: {fileID: 1103962207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d743e7ab1e44c3382adf0dba30eda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1150713088
 GameObject:
   m_ObjectHideFlags: 0
@@ -61981,7 +62128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5609725561674719106, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
       propertyPath: m_Name
-      value: Cooldown(king3)
+      value: Cooldown(king3)(Shoot)
       objectReference: {fileID: 0}
     - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
       propertyPath: m_Pivot.x
@@ -62345,7 +62492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5609725561674719106, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
       propertyPath: m_Name
-      value: Cooldown(king2)
+      value: Cooldown(king2)(Shoot)
       objectReference: {fileID: 0}
     - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
       propertyPath: m_Pivot.x
@@ -63398,7 +63545,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2457009425256220296, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
   m_PrefabInstance: {fileID: 392402501374664865}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1069566307}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3303ed817dc88a74eaf48f72cd621e44, type: 3}
@@ -63451,6 +63598,11 @@ MonoBehaviour:
   villagePrefab: {fileID: 3532183522163729768, guid: 49e63dfd2e81b794a8cedf6baf78c940, type: 3}
   villageArray: []
   possibleLocation: []
+--- !u!4 &1889826253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 392402500242344437, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+  m_PrefabInstance: {fileID: 392402501374664865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1961648770 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2840393621063439287, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
@@ -63563,6 +63715,7 @@ RectTransform:
   - {fileID: 1466821700}
   - {fileID: 1250522032}
   - {fileID: 1585101890}
+  - {fileID: 1103962208}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -64249,7 +64402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5609725561674719106, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
       propertyPath: m_Name
-      value: Cooldown(king1)
+      value: Cooldown(king1)(Shoot)
       objectReference: {fileID: 0}
     - target: {fileID: 5609725561674719109, guid: f0c1d9243320f47e8ab94049fc2bc2a2, type: 3}
       propertyPath: m_Pivot.x
