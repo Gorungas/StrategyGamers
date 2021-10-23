@@ -58,6 +58,14 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetFloat("Ver", move.y);
         _soldierAnimator.SetFloat("Hor", Mathf.Abs(move.x));
         _soldierAnimator.SetFloat("Ver", move.y);
+        if (move == Vector2.zero)
+        {
+            _animator.SetBool("Idle",true);
+        }
+        else
+        {
+            _animator.SetBool("Idle", false);
+        }
         if (move.x < -0.1f)
         {
             transform.localScale = new Vector2(-scale, transform.localScale.y);

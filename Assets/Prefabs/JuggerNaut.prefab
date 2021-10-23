@@ -151,12 +151,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3880830477785606780}
   - component: {fileID: 3880830477785606781}
+  - component: {fileID: 8353602923916755865}
   - component: {fileID: 3880830477785606779}
   - component: {fileID: 3880830477785606778}
   - component: {fileID: 3880830477785606777}
   - component: {fileID: 3880830477785606776}
   - component: {fileID: 261572898}
-  - component: {fileID: 8353602923916755865}
   - component: {fileID: 261572900}
   - component: {fileID: 6888706826264549778}
   - component: {fileID: 2122144045991104578}
@@ -235,6 +235,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8353602923916755865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880830477785606782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9ae0c06116140ec84e664f7e6d7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 1
 --- !u!114 &3880830477785606779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,19 +364,6 @@ MonoBehaviour:
   - {fileID: 590080197532746430}
   - {fileID: 7839044731863760563}
   coolDownBar: {fileID: 0}
---- !u!114 &8353602923916755865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880830477785606782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9ae0c06116140ec84e664f7e6d7e57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNum: 1
 --- !u!114 &261572900
 MonoBehaviour:
   m_ObjectHideFlags: 0

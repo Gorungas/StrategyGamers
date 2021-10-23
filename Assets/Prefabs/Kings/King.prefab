@@ -618,6 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6298776153868329079}
   - component: {fileID: 5182211728548994043}
+  - component: {fileID: 1764626583418723602}
   - component: {fileID: 5252704942879536627}
   - component: {fileID: 6665160845780492254}
   - component: {fileID: 5381131831384394294}
@@ -625,7 +626,6 @@ GameObject:
   - component: {fileID: 6351979143025822513}
   - component: {fileID: 1474629566}
   - component: {fileID: 1474629571}
-  - component: {fileID: 1764626583418723602}
   - component: {fileID: 5237615434675597783}
   - component: {fileID: 2840393621063439287}
   - component: {fileID: -3124246338314224110}
@@ -703,6 +703,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1764626583418723602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9197323571000292631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9ae0c06116140ec84e664f7e6d7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
 --- !u!50 &5252704942879536627
 Rigidbody2D:
   serializedVersion: 4
@@ -857,19 +870,6 @@ MonoBehaviour:
   playerNum: 1
   reticle: {fileID: 1140923594}
   king: {fileID: 6298776153868329079}
---- !u!114 &1764626583418723602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9197323571000292631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9ae0c06116140ec84e664f7e6d7e57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNum: 0
 --- !u!114 &5237615434675597783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,6 +909,7 @@ MonoBehaviour:
   playerNum: 0
   healDelay: 2
   isDead: 0
+  deathSound: {fileID: 0}
 --- !u!82 &-3124246338314224110
 AudioSource:
   m_ObjectHideFlags: 0
