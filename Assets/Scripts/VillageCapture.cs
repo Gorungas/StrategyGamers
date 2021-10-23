@@ -13,7 +13,7 @@ public class VillageCapture : MonoBehaviour
     private bool isCapturing;
     private GameObject lastKing;
     public TMP_Text numTxt;
-    public SpriteRenderer sr;
+    public SpriteRenderer sr,parentSR;
     private Color kingColor;
     public Color transparentColor;
     //private SoilderManager soilderManager;
@@ -22,7 +22,7 @@ public class VillageCapture : MonoBehaviour
     {
         //sr = GetComponent<SpriteRenderer>();
         StartCoroutine(Recover());
-        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
+        parentSR.sprite = sprites[Random.Range(0, sprites.Length)];
     }
 
     // Update is called once per frame
@@ -90,7 +90,11 @@ public class VillageCapture : MonoBehaviour
     void OnDestroy()
     {
         GameObject jugg = GameObject.FindGameObjectWithTag("Jugg");
-        jugg.GetComponent<JuggGrowthScript>().LevelUp();
+        if (jugg)
+        {
+            jugg.GetComponent<JuggGrowthScript>().LevelUp();
+        }
+        
     }
     //King leave viilage
 }
