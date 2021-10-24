@@ -301,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 261572899}
   king: {fileID: 168225185}
+  hideDistance: 10
 --- !u!1 &30006374
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7609919871797983820}
   king: {fileID: 168225185}
+  hideDistance: 10
 --- !u!4 &168225185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6298776153868329079, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
@@ -29564,6 +29566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 261572899}
   king: {fileID: 98844480}
+  hideDistance: 10
 --- !u!1 &453417680
 GameObject:
   m_ObjectHideFlags: 0
@@ -29610,6 +29613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 168225185}
   king: {fileID: 7609919871797983820}
+  hideDistance: 10
 --- !u!1 &459098757
 GameObject:
   m_ObjectHideFlags: 0
@@ -51412,6 +51416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 98844480}
   king: {fileID: 168225185}
+  hideDistance: 10
 --- !u!1 &932442379
 GameObject:
   m_ObjectHideFlags: 0
@@ -51669,6 +51674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7609919871797983820}
   king: {fileID: 98844480}
+  hideDistance: 10
 --- !u!1 &1000242580
 GameObject:
   m_ObjectHideFlags: 0
@@ -63766,6 +63772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 98844480}
   king: {fileID: 261572899}
+  hideDistance: 10
 --- !u!1001 &1326800527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64673,6 +64680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 98844480}
   king: {fileID: 7609919871797983820}
+  hideDistance: 10
 --- !u!1 &1528856362
 GameObject:
   m_ObjectHideFlags: 0
@@ -66023,6 +66031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7609919871797983820}
   king: {fileID: 261572899}
+  hideDistance: 10
 --- !u!1 &1924314753
 GameObject:
   m_ObjectHideFlags: 0
@@ -66527,6 +66536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 261572899}
   king: {fileID: 7609919871797983820}
+  hideDistance: 10
 --- !u!1 &1985151245
 GameObject:
   m_ObjectHideFlags: 0
@@ -66774,6 +66784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 168225185}
   king: {fileID: 261572899}
+  hideDistance: 10
 --- !u!1 &2097670510
 GameObject:
   m_ObjectHideFlags: 0
@@ -66820,6 +66831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 168225185}
   king: {fileID: 98844480}
+  hideDistance: 10
 --- !u!1 &2099208574
 GameObject:
   m_ObjectHideFlags: 0
@@ -67013,6 +67025,10 @@ PrefabInstance:
     - target: {fileID: 392402500242344438, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 392402500242344438, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2093929158782011437, guid: 772d4d0e9db554ea1bc62c24e9cd5bf8, type: 3}
       propertyPath: playerNum
