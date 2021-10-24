@@ -10,6 +10,7 @@ public class MeleeAttack : MonoBehaviour
     //public Sprite attackSprite;
     //Sprite idleSprite;
     private Animator _animator;
+    private Rigidbody2D rb;
 
     public float duration;
     public bool canAtt = true;
@@ -32,6 +33,7 @@ public class MeleeAttack : MonoBehaviour
     {
         //idleSprite = sr.sprite;
         //audioSource = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
         int playerNum = GetComponent<PlayerNumberManager>().playerNum;
         button = "Attack" + playerNum;
         movement = GetComponent<PlayerMovement>();
@@ -55,6 +57,7 @@ public class MeleeAttack : MonoBehaviour
     {
         movement.canMove = false;
         _animator.SetTrigger("Attack");
+        rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(duration);
         //sr.sprite = attackSprite;
 
