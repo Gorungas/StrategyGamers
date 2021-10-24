@@ -29,7 +29,7 @@ public class FireScript : MonoBehaviour
     public CoolDownBarScript coolDownBar;
 
     private PlayerMovement movement;
-
+    private Rigidbody2D rb;
     
 
     void Start()
@@ -54,6 +54,7 @@ public class FireScript : MonoBehaviour
     {
         canFire = false;
         movement.canMove = false;
+        rb.velocity = Vector2.zero;
         source.PlayOneShot(bowShot);
         yield return new WaitForSeconds(0.3f);
         //dmg = manager.soldiers.Count;
