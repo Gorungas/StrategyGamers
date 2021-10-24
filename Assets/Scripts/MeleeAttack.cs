@@ -9,6 +9,7 @@ public class MeleeAttack : MonoBehaviour
     //public SpriteRenderer sr;
     //public Sprite attackSprite;
     //Sprite idleSprite;
+    private Animator _animator;
 
     public float duration;
     public bool canAtt = true;
@@ -34,6 +35,7 @@ public class MeleeAttack : MonoBehaviour
         int playerNum = GetComponent<PlayerNumberManager>().playerNum;
         button = "Attack" + playerNum;
         movement = GetComponent<PlayerMovement>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,9 @@ public class MeleeAttack : MonoBehaviour
     }
     IEnumerator Attack()
     {
+        movement.canMove = false;
+        _animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(duration);
         //sr.sprite = attackSprite;
 
         //for(float i=0; i < duration; i+=Time.deltaTime)
@@ -59,18 +64,22 @@ public class MeleeAttack : MonoBehaviour
         //}
         PlayerMovement.FaceDirection face = movement.face;
         int direction = ((int)face);
+        if (direction == 3)
+        {
+            direction = 2;
+        }
         if (attEffects[direction] != null)
         {
             attEffects[direction].SetActive(true);
         }
         DetectAttack(direction);
-        movement.canMove = false;
         yield return new WaitForSeconds(duration);
         movement.canMove = true;
         if (attEffects[direction] != null)
         {
             attEffects[direction].SetActive(false);
         }
+        //_animator.SetBool("Attack", false);
         //Debug.Log("end");
         //if (coolSprite != null)
         //{

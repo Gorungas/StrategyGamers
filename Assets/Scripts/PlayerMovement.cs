@@ -76,12 +76,15 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector2(scale, transform.localScale.y);
             
         }
-        if (move.x != 0)
+        if (move.x > 0)
         {
             face = FaceDirection.Right;
 
         }
-        face = FaceDirection.Left;
+        else if (move.x < 0)
+        {
+            face = FaceDirection.Left;
+        }
         if (move.y > 0)
         {
             face = FaceDirection.Up;

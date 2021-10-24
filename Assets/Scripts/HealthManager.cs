@@ -19,9 +19,12 @@ public class HealthManager : MonoBehaviour
     private AudioSource Source;
     public AudioClip deathSound;
 
+    private SpriteRenderer sr;
+
     public void Start()
     {
         _animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         if (!CompareTag("Village"))
         {
             playerNum = GetComponent<PlayerNumberManager>().playerNum;
@@ -31,7 +34,7 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
-        if ((!CompareTag("Jugg"))&&currentHealth < maxHealth && HealingNow == false && !isDead)
+        if ((!CompareTag("Jugg"))&&(!CompareTag("Village"))&&currentHealth < maxHealth && HealingNow == false && !isDead)
         {
             StartCoroutine(Heal());
             HealingNow = true;
@@ -47,7 +50,10 @@ public class HealthManager : MonoBehaviour
         if (!isDead)
         {
             currentHealth -= dmg;
-
+            if (sr != null)
+            {
+                StartCoroutine(TurnRed());
+            }
             if (currentHealth <= 0)
             {
                 isDead = true;
@@ -65,7 +71,12 @@ public class HealthManager : MonoBehaviour
         }
 
     }
-
+    public IEnumerator TurnRed()
+    {
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        sr.color = Color.white;
+    }
     public IEnumerator Heal()
     {
             if (HealedRecently == false && currentHealth < maxHealth && !isDead)
