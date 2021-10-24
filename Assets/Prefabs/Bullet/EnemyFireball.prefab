@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6837774867616016809}
   - component: {fileID: 6837774867616016788}
   - component: {fileID: 6837774867616016789}
+  - component: {fileID: 5953248731930713581}
   m_Layer: 10
   m_Name: EnemyFireball
-  m_TagString: Bullet
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,3 +142,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5953248731930713581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837774867616016808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a7529d3e32e464ea0fe2cf23ff4201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
+  damage: 0
+  Hitsound: {fileID: 8300000, guid: 6c86fc141ea604b1f96c85228e34303b, type: 3}
+  destroyAfterHit: 0

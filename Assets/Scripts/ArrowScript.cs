@@ -10,7 +10,7 @@ public class ArrowScript : MonoBehaviour
 
     AudioSource Source;
     public AudioClip Hitsound;
-
+    public bool destroyAfterHit=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,10 @@ public class ArrowScript : MonoBehaviour
             {
                 collision.GetComponent<HealthManager>().TakeDamage(damage);
                 Source.PlayOneShot(Hitsound);
-                Destroy(gameObject);
+                if (destroyAfterHit)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         if (collision.CompareTag("Village"))
