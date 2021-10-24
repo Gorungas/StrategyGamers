@@ -11,6 +11,7 @@ public class ArrowScript : MonoBehaviour
     AudioSource Source;
     public AudioClip Hitsound;
     public bool destroyAfterHit=true;
+    public GameObject particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,7 @@ public class ArrowScript : MonoBehaviour
                 Source.PlayOneShot(Hitsound);
                 if (destroyAfterHit)
                 {
+                    CreateParticle();
                     Destroy(gameObject);
                 }
             }
@@ -47,8 +49,16 @@ public class ArrowScript : MonoBehaviour
         if (collision.CompareTag("Village")|| collision.CompareTag("Shield"))
         {
             Source.PlayOneShot(Hitsound);
+            CreateParticle();
             Destroy(gameObject);
         }
     }
-    
+    private void CreateParticle()
+    {
+        GameObject newParticle = Instantiate(particle,transform.position,Quaternion.identity);
+        var main = newParticle.GetComponent<ParticleSystem>().main;
+        Color color = GetComponent<SpriteRenderer>().color;
+        //Color randomColor = new Color(Random.Range(color.r - 0.1f, color.r + 0.1f), Random.Range(color.g - 0.1f, color.g + 0.1f), Random.Range(color.b - 0.1f, color.b + 0.1f));
+        main.startColor = new ParticleSystem.MinMaxGradient(color,Color.white);
+    }
 }
