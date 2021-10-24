@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ReticleScript : MonoBehaviour
 {
-    private int playerNum;
+    public int playerNum;
     public Transform reticle;
     public Transform king;
     private HealthManager healthMan;
 
     private void Start()
     {
-        playerNum = GetComponent<PlayerNumberManager>().playerNum;
         healthMan = GetComponent<HealthManager>();
     }
     void Update()

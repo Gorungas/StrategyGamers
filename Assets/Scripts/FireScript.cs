@@ -38,6 +38,7 @@ public class FireScript : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         button = "Attack" + playerNum;
         soldiers = GetComponent<SoilderManager>().soldiers;
+
         source = FindObjectOfType<AudioSource>();
         coolDownBar.icon.color = arrowColor;
     }
