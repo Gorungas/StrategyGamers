@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
-public class SelectMove : MonoBehaviour
+public class CharSelect : MonoBehaviour
 {
     public int playerNum;
     public Transform[] pos;
@@ -48,7 +48,7 @@ public class SelectMove : MonoBehaviour
             canMove = true;
         }
 
-        if (Input.GetButtonDown("Jump" + playerNum))
+        if (Input.GetButtonDown("Attack" + playerNum))
         {
             if (PublicVars.characters[index] == playerNum)
             {
@@ -64,7 +64,7 @@ public class SelectMove : MonoBehaviour
                 print("player" + PublicVars.characters[index] + " is " + index);
                 if (!PublicVars.characters.Contains(-1))
                 {
-                    SceneManager.LoadScene("Level1");
+                    SceneManager.LoadScene("SampleScene");
                 }
 
             }
