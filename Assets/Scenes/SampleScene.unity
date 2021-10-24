@@ -66624,6 +66624,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1764626583418723602, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+      propertyPath: charIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764626583418723602, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
       propertyPath: playerNum
       value: 2
       objectReference: {fileID: 0}
@@ -67184,6 +67188,10 @@ PrefabInstance:
       value: JuggerNaut
       objectReference: {fileID: 0}
     - target: {fileID: 8353602923916755865, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
+      propertyPath: charIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353602923916755865, guid: 3d040347afa5d47e28bdaab2fb394ebc, type: 3}
       propertyPath: playerNum
       value: 4
       objectReference: {fileID: 0}
@@ -67354,6 +67362,10 @@ PrefabInstance:
     - target: {fileID: 1474629571, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
       propertyPath: playerNum
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764626583418723602, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
+      propertyPath: charIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1764626583418723602, guid: 293554595bf21a4429796d01e8debfcc, type: 3}
       propertyPath: playerNum
