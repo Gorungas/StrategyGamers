@@ -6,6 +6,7 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+<<<<<<< Updated upstream
     public int playerNum;
 
     public float healDelay;
@@ -79,5 +80,18 @@ public class HealthManager : MonoBehaviour
         yield return new WaitForSeconds(healDelay);
         HealedRecently = false;
         HealingNow = false;
+=======
+
+    void TakeDamage()
+    {
+    }
+
+    void Heal()
+    {
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+>>>>>>> Stashed changes
     }
 }

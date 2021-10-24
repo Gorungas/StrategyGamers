@@ -16,10 +16,18 @@ public class PlayerMovement : MonoBehaviour
     private Animator _soldierAnimator;
     public float scale = 1;
 
+<<<<<<< Updated upstream
     HealthManager healthMan;
 
     public enum FaceDirection {Up,Down,Right, Left };
     public FaceDirection face=FaceDirection.Down;
+=======
+    public float speed;
+
+    private Rigidbody2D rb;
+
+    public Rigidbody2D reticle;
+>>>>>>> Stashed changes
 
     void Start()
     {
@@ -28,16 +36,20 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         hor = "Horizontal" + playerNum;
         vert = "Vertical" + playerNum;
+<<<<<<< Updated upstream
         stop = "Stop" + playerNum;
         _animator = GetComponent<Animator>();
         _soldierAnimator = GetComponent<Animator>();
         healthMan = GetComponent<HealthManager>();
 
+=======
+>>>>>>> Stashed changes
     }
 
 
     void Update()
     {
+<<<<<<< Updated upstream
         if (canMove)
         {
             if (Input.GetButton(stop))
@@ -95,5 +107,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = move;
         }
         //rb.velocity = move;
+=======
+        rb.velocity = new Vector2(Input.GetAxis(hor), Input.GetAxis(vert))  * speed;
+>>>>>>> Stashed changes
     }
 }
