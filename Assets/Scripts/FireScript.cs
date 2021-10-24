@@ -40,6 +40,7 @@ public class FireScript : MonoBehaviour
         soldiers = GetComponent<SoilderManager>().soldiers;
         source = FindObjectOfType<AudioSource>();
         coolDownBar.icon.color = arrowColor;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
