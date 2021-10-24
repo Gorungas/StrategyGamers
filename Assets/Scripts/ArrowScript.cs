@@ -32,7 +32,7 @@ public class ArrowScript : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Jugg")||collision.CompareTag("Soldier")|| collision.CompareTag("King"))
+        if (collision.CompareTag("Jugg") || collision.CompareTag("Soldier") || collision.CompareTag("King"))
         {
             if (collision.GetComponent<PlayerNumberManager>().playerNum != playerNum && !collision.GetComponent<HealthManager>().isDead)
             {
@@ -44,7 +44,7 @@ public class ArrowScript : MonoBehaviour
                 }
             }
         }
-        if (collision.CompareTag("Village"))
+        if (collision.CompareTag("Village")|| collision.CompareTag("Shield"))
         {
             Source.PlayOneShot(Hitsound);
             Destroy(gameObject);

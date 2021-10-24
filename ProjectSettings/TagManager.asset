@@ -8,9 +8,8 @@ TagManager:
   - Village
   - Jugg
   - Arrow
-  - Arrow2
-  - Arrow3
   - Soldier
+  - Shield
   layers:
   - Default
   - TransparentFX
