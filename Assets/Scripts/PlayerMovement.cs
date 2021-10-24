@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     HealthManager healthMan;
 
-    public enum FaceDirection {Up,Down,Right };
+    public enum FaceDirection {Up,Down,Right, Left };
     public FaceDirection face=FaceDirection.Down;
 
     void Start()
@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _soldierAnimator = GetComponent<Animator>();
         healthMan = GetComponent<HealthManager>();
+
     }
 
 
@@ -73,12 +74,14 @@ public class PlayerMovement : MonoBehaviour
         else if(move.x>0.1f)
         {
             transform.localScale = new Vector2(scale, transform.localScale.y);
+            
         }
         if (move.x != 0)
         {
             face = FaceDirection.Right;
+
         }
-        face = FaceDirection.Right;
+        face = FaceDirection.Left;
         if (move.y > 0)
         {
             face = FaceDirection.Up;
