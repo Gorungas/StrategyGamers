@@ -71,5 +71,10 @@ public class SelectMove : MonoBehaviour
 
             }
         }
+        
+    }
+    public void changeScene()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }

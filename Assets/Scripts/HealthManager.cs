@@ -59,7 +59,6 @@ public class HealthManager : MonoBehaviour
                 isDead = true;
                 //Source.PlayOneShot(deathSound);
                 _animator.SetBool("IsDead", true);
-                PublicVars.livingCharacters[playerNum - 1] = 0;
                 if (CompareTag("Village"))
                 {
                     Destroy(gameObject);
@@ -67,6 +66,11 @@ public class HealthManager : MonoBehaviour
                 else if (CompareTag("Soldier"))
                 {
                     Destroy(gameObject);
+                }
+                if (CompareTag("King") || CompareTag("Jugg"))
+                {
+                    PublicVars.livingCharacters[playerNum - 1] = 0;
+
                 }
             }
         }
