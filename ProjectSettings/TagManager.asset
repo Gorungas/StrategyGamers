@@ -10,6 +10,7 @@ TagManager:
   - Arrow
   - Soldier
   - Shield
+  - Music
   layers:
   - Default
   - TransparentFX

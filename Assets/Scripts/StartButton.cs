@@ -8,4 +8,8 @@ public class StartButton : MonoBehaviour
     {
         SceneManager.LoadScene("CharSelect");
     }
+    public void Help()
+    {
+        SceneManager.LoadScene("Help"); 
+    }
 }
