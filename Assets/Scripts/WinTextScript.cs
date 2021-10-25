@@ -14,6 +14,8 @@ public class WinTextScript : MonoBehaviour
 
     public void Restart()
     {
+        PublicVars.characters = new int[] { -1, -1, -1, -1 };
+        PublicVars.livingCharacters = new List<int>() { 1, 1, 1, 1 };
         SceneManager.LoadScene("StartScreen");
 
     }

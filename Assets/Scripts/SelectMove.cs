@@ -66,7 +66,7 @@ public class SelectMove : MonoBehaviour
                 print("player" + PublicVars.characters[index] + " is " + index);
                 if (!PublicVars.characters.Contains(-1))
                 {
-                    SceneManager.LoadScene(2);
+                    SceneManager.LoadScene("SampleScene");
                 }
 
             }
