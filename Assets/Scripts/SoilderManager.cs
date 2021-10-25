@@ -35,12 +35,10 @@ public class SoilderManager : MonoBehaviour
     }
     public int SetSoldier(int num)
     {
-        foreach (GameObject soldier in soldiers)
+        for (var i = soldiers.Count - 1; i > -1; i--)
         {
-            if (soldier == null)
-            {
-                soldiers.Remove(soldier);
-            }
+            if (soldiers[i] == null)
+                soldiers.RemoveAt(i);
         }
         int soldierNum = soldiersPoses.Length - soldiers.Count;
         if (num < soldierNum)
