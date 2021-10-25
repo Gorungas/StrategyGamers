@@ -44,7 +44,7 @@ public class SelectMove : MonoBehaviour
             transform.position = pos[index].position;
             canMove = false;
         }
-        else if (Input.GetAxisRaw("Horizontal" + playerNum) == 0 && PublicVars.characters[playerNum - 1] == -1)
+        else if (Input.GetAxisRaw("Horizontal" + playerNum) == 0 && !selected)
         {
             canMove = true;
         }
